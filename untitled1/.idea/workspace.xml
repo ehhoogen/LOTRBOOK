@@ -43,17 +43,26 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/H3.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="357">
               <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
 >>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
+=======
+            <state relative-caret-position="204">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+>>>>>>> bc1fd1064d8f270ea3de9c1993f5e72951c0b2e8
             </state>
           </provider>
         </entry>
@@ -70,7 +79,11 @@
         <option value="$PROJECT_DIR$/style.css" />
 =======
         <option value="$PROJECT_DIR$/H3.html" />
+<<<<<<< HEAD
 >>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
+=======
+        <option value="$PROJECT_DIR$/style.css" />
+>>>>>>> bc1fd1064d8f270ea3de9c1993f5e72951c0b2e8
       </list>
     </option>
   </component>
@@ -163,12 +176,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550068650684</updated>
+<<<<<<< HEAD
       <workItem from="1550068654755" duration="444000" />
 >>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
+=======
+      <workItem from="1550068654755" duration="1153000" />
+>>>>>>> bc1fd1064d8f270ea3de9c1993f5e72951c0b2e8
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="1154000" />
   </component>
@@ -180,6 +198,9 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
 =======
     <option name="totallyTimeSpent" value="444000" />
+=======
+    <option name="totallyTimeSpent" value="1153000" />
+>>>>>>> bc1fd1064d8f270ea3de9c1993f5e72951c0b2e8
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -213,6 +234,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Lotrhome.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -228,6 +250,8 @@
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+=======
+>>>>>>> bc1fd1064d8f270ea3de9c1993f5e72951c0b2e8
     <entry file="file://$PROJECT_DIR$/Lotrhome.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -237,9 +261,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/H3.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="357">
           <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
 >>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
+=======
+        <state relative-caret-position="204">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+>>>>>>> bc1fd1064d8f270ea3de9c1993f5e72951c0b2e8
         </state>
       </provider>
     </entry>
