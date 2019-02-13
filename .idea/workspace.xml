@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d74fa7d-7f7a-4d38-9f5e-11f9836b5ca6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/untitled1/Lotrhome.html" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/Lotrhome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="7d74fa7d-7f7a-4d38-9f5e-11f9836b5ca6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -124,12 +121,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550068240255</updated>
-      <workItem from="1550068248491" duration="1504000" />
+      <workItem from="1550068248491" duration="1967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1504000" />
+    <option name="totallyTimeSpent" value="1967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
