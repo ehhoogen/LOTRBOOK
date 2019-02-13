@@ -39,7 +39,7 @@ body{
     background-image: url(IMG/Background.jpg);
     background-repeat: no-repeat;
     background-size: 100% ;
-
+    background-position: 0px -70px
 }
 .Letters{
     display: block;
