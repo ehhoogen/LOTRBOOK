@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="6ac2cfc1-2944-4a10-979d-ccdd9cd98f6a" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="7d74fa7d-7f7a-4d38-9f5e-11f9836b5ca6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/untitled1/Lotrhome.html" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/Lotrhome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/style.css" afterDir="false" />
+    </list>
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -11,6 +18,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -20,20 +28,95 @@
     <option name="width" value="855" />
     <option name="height" value="830" />
   </component>
+=======
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/untitled1/Lotrhome.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="15" column="48" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/untitled1/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>background</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/untitled1/Lotrhome.html" />
+        <option value="$PROJECT_DIR$/untitled1/style.css" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="ProjectPane" />
+=======
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="LOTRBOOK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LOTRBOOK" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LOTRBOOK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LOTRBOOK" type="462c0819:PsiDirectoryNode" />
+              <item name="untitled1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LOTRBOOK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LOTRBOOK" type="462c0819:PsiDirectoryNode" />
+              <item name="untitled1" type="462c0819:PsiDirectoryNode" />
+              <item name="IMG" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/untitled1" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+=======
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -47,25 +130,55 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+=======
+  <component name="RunManager">
+    <configuration name="Lotrhome.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LOTRBOOK/untitled1/Lotrhome.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.Lotrhome.html" />
+      </list>
+    </recent_temporary>
+  </component>
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="6ac2cfc1-2944-4a10-979d-ccdd9cd98f6a" name="Default Changelist" comment="" />
       <created>1550068486825</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550068486825</updated>
       <workItem from="1550068488046" duration="119000" />
+=======
+      <changelist id="7d74fa7d-7f7a-4d38-9f5e-11f9836b5ca6" name="Default Changelist" comment="" />
+      <created>1550068240255</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550068240255</updated>
+      <workItem from="1550068248491" duration="1504000" />
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="1504000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
@@ -89,4 +202,23 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/untitled1/Lotrhome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled1/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
 </project>
