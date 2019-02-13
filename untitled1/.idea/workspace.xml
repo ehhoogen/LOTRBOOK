@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="2ce68fc2-5f89-412d-92c6-b5f295edeb36" name="Default Changelist" comment="" />
+=======
     <list default="true" id="8b7ee8ad-257e-4e2f-a8ad-12d5dbc4d250" name="Default Changelist" comment="" />
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,12 +20,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lotrhome.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="459">
+              <caret line="27" column="16" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="16" />
+=======
             <state relative-caret-position="306">
+<<<<<<< HEAD
               <caret line="24" column="53" lean-forward="true" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+=======
+              <caret line="23" column="53" lean-forward="true" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
+>>>>>>> c5fd1e80c6baacf8ecfff1528b803c534c5061cb
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-357">
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
+=======
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style.css.txt">
           <provider selected="true" editor-type-id="text-editor" />
@@ -39,8 +59,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/H3.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="398">
               <caret line="33" column="118" selection-start-line="33" selection-start-column="118" selection-end-line="33" selection-end-column="118" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="357">
+              <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
+=======
+            <state relative-caret-position="204">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+>>>>>>> bc1fd1064d8f270ea3de9c1993f5e72951c0b2e8
+>>>>>>> c5fd1e80c6baacf8ecfff1528b803c534c5061cb
             </state>
           </provider>
         </entry>
@@ -53,16 +84,35 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/H3.html" />
+=======
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/style.css" />
+=======
+        <option value="$PROJECT_DIR$/H3.html" />
+<<<<<<< HEAD
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
+=======
+        <option value="$PROJECT_DIR$/style.css" />
+>>>>>>> bc1fd1064d8f270ea3de9c1993f5e72951c0b2e8
+>>>>>>> c5fd1e80c6baacf8ecfff1528b803c534c5061cb
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
+    <option name="x" value="695" />
+    <option name="y" value="56" />
+    <option name="width" value="855" />
+    <option name="height" value="830" />
+=======
     <option name="x" value="15" />
     <option name="y" value="30" />
     <option name="width" value="1890" />
     <option name="height" value="960" />
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -70,7 +120,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
       <pane id="Scope" />
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -82,11 +135,20 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+      <pane id="Scope" />
+=======
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+=======
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -115,17 +177,52 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="2ce68fc2-5f89-412d-92c6-b5f295edeb36" name="Default Changelist" comment="" />
+      <created>1550068607222</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550068607222</updated>
+      <workItem from="1550068608403" duration="1154000" />
+=======
       <changelist id="8b7ee8ad-257e-4e2f-a8ad-12d5dbc4d250" name="Default Changelist" comment="" />
       <created>1550068650684</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550068650684</updated>
+<<<<<<< HEAD
       <workItem from="1550068654755" duration="1644000" />
+=======
+<<<<<<< HEAD
+      <workItem from="1550068654755" duration="444000" />
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
+=======
+      <workItem from="1550068654755" duration="1153000" />
+>>>>>>> bc1fd1064d8f270ea3de9c1993f5e72951c0b2e8
+>>>>>>> c5fd1e80c6baacf8ecfff1528b803c534c5061cb
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="1644000" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="1154000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
+=======
+    <option name="totallyTimeSpent" value="444000" />
+=======
+    <option name="totallyTimeSpent" value="1153000" />
+>>>>>>> bc1fd1064d8f270ea3de9c1993f5e72951c0b2e8
+>>>>>>> c5fd1e80c6baacf8ecfff1528b803c534c5061cb
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -133,6 +230,7 @@
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24244833" />
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
@@ -157,6 +255,25 @@
     <entry file="file://$PROJECT_DIR$/style.css.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/Lotrhome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+=======
+>>>>>>> bc1fd1064d8f270ea3de9c1993f5e72951c0b2e8
     <entry file="file://$PROJECT_DIR$/Lotrhome.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -166,15 +283,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="850">
           <caret line="50" selection-start-line="50" selection-end-line="50" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="357">
+          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+>>>>>>> e985620c0ed09156ff1256bf19e140033a0f4ef2
+=======
+        <state relative-caret-position="204">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+>>>>>>> c5fd1e80c6baacf8ecfff1528b803c534c5061cb
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/H3.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="398">
           <caret line="33" column="118" selection-start-line="33" selection-start-column="118" selection-end-line="33" selection-end-column="118" />
+=======
+        <state relative-caret-position="141">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+>>>>>>> bc1fd1064d8f270ea3de9c1993f5e72951c0b2e8
+>>>>>>> c5fd1e80c6baacf8ecfff1528b803c534c5061cb
         </state>
       </provider>
     </entry>
