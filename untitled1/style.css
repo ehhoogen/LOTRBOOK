@@ -49,8 +49,27 @@ nav a{
     text-decoration: none;
     text-transform: uppercase;
 }
-nav a:hover{
+nav a:hover {
     color: White;
+}
+
+.Legend {
+    display: block;
+    background-color: silver;
+    position: fixed;
+    width: 200px;
+    height: 350px;
+    margin-top: 6%;
+
+}
+
+.LegendText {
+    color: slategrey;
+
+    font-size: 22px;
+    text-align: center;
+    margin: 13%;
+
 }
 body{
     background-color: black;
@@ -88,6 +107,14 @@ body{
     margin: 20%;
     margin-top:30%;
     line-height:40pt;
+}
+
+.AuthorText{
+    color:white;
+    text-align:center;
+    font-size:15px;
+    margin: 10%;
+    margin-top:2%;
 
 }
 
