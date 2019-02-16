@@ -13,11 +13,21 @@ table.characters{
     min-width: 1500px;
 }
 
-table.characters th, table.characters td{
+table.characters th {
     text-align: center;
     color: white;
-    border: 2px solid white;
+    background-color: gold;
+    border: 2px solid darkgray;
     border-collapse: collapse;
+    padding: 10px;
+}
+
+table.characters td{
+    text-align: center;
+    color: black;
+    background: gold;
+    padding: 6px;
+    border: 2px solid darkgray;
 }
 
 header {
