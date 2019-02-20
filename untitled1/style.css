@@ -135,7 +135,7 @@ nav a:hover {
 
 body{
     background-color: black;
-    background-image: url(IMG/Background.jpg);
+    background-image: url(IMG/background.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 0px -70px
@@ -214,20 +214,8 @@ table, th, td {
     text-align: center;
 }
 
-.Characterstext a:link{
-    color: lightgray;
-}
-
 .Characterstext a:visited{
-    color: red;
-}
-
-.Characterstext a:hover{
-    color: blue;
-}
-
-.Characterstext a:active{
-    color: lawngreen;
+    color: mediumpurple;
 }
 .navigation{
     position: absolute;
@@ -258,6 +246,14 @@ table, th, td {
     width:300px;
     height:400px;
     overflow: hidden;
+
+}
+.summary h1{
+    margin-top:320px;
+    text-align: center;
+    color:gold;
+    font-size: 50px;
+
 
 }
 .boxje .content{
