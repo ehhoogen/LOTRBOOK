@@ -27,6 +27,27 @@ table.characters th {
             1px 1px 0 #000;
 }
 
+table.authortable {
+    width: 100%;
+}
+table.authortable th {
+    text-align: center;
+    color: white;
+    background-color: gold;
+    border: 2px solid darkgray;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+}
+
+table.authortable td {
+    color: black;
+    text-align: center;
+    background: rgba(255,215,0,0.5);
+}
+
 table.characters td{
     text-align: center;
     color: black;
@@ -93,18 +114,30 @@ nav a:hover {
 
 }
 
-.legendText {
+.legendtext {
     color: slategrey;
     font-size: 22px;
     text-align: center;
     margin: 14%;
-
+    }
+.legendtext a:link{
+    color: black;
 }
+.legendtext a:visited{
+    color: black;
+}
+.legendtext a:hover{
+    color: white;
+}
+.legendtext a:active{
+    color: lightgray;
+}
+
 body{
     background-color: black;
     background-image: url(IMG/Background.jpg);
     background-repeat: no-repeat;
-    background-size: 100% ;
+    background-size: 100%;
     background-position: 0px -70px
 }
 .tolkien{
