@@ -27,6 +27,27 @@ table.characters th {
             1px 1px 0 #000;
 }
 
+table.authortable {
+    width: 100%;
+}
+table.authortable th {
+    text-align: center;
+    color: white;
+    background-color: gold;
+    border: 2px solid darkgray;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+}
+
+table.authortable td {
+    color: black;
+    text-align: center;
+    background: rgba(255,215,0,0.5);
+}
+
 table.characters td{
     text-align: center;
     color: black;
@@ -93,18 +114,30 @@ nav a:hover {
 
 }
 
-.legendText {
+.legendtext {
     color: slategrey;
     font-size: 22px;
     text-align: center;
     margin: 14%;
-
+    }
+.legendtext a:link{
+    color: black;
 }
+.legendtext a:visited{
+    color: black;
+}
+.legendtext a:hover{
+    color: white;
+}
+.legendtext a:active{
+    color: lightgray;
+}
+
 body{
     background-color: black;
     background-image: url(IMG/background.jpg);
     background-repeat: no-repeat;
-    background-size: 100% ;
+    background-size: 100%;
     background-position: 0px -70px
 }
 .tolkien{
@@ -136,9 +169,9 @@ table, th, td {
     margin-top:10%;
 }
 .HeadText{
-    color: black;
+    color: gold;
     text-align: center;
-    text-shadow: 0.013em 0 white, 0 0.013em white, -0.013em 0 white, 0 -0.013em white;
+    text-shadow: 0.016em 0 black, 0 0.016em black, -0.016em 0 black, 0 -0.016em black;
     font-size: 50px;
     margin-top: 5%;
 }
@@ -161,7 +194,7 @@ table, th, td {
 
 }
 .authortext2 {
-    color: white;
+    color: gold;
     text-align: center;
     font-size: 30px;
     margin: 10%;
@@ -183,18 +216,6 @@ table, th, td {
 .Characterstext a:visited{
     color: mediumpurple;
 }
-
-.slidershow{
-    width:300px;
-    height:400px;
-    overflow: hidden;
-}
-.middle{
-    position: absolute;
-    margin-top: 50%;
-    margin-left: 10%;
-    transform:translate(-50%,-50%);
-}
 .navigation{
     position: absolute;
     bottom: 20px;
@@ -202,6 +223,62 @@ table, th, td {
     transform: translateX(-50%);
     display:flex;
 }
+.boxje{
+    position: absolute;
+    margin-top:1500px;
+
+    width:80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius:4px;
+    display: flex;
+
+}
+.boxje .middle{
+    position: absolute;
+    margin-top: 180px;
+    transform:translate(-50%,-50%);
+}
+.boxje .slidershow{
+    width:300px;
+    height:400px;
+    overflow: hidden;
+
+}
+.summary h1{
+    margin-top:320px;
+    text-align: center;
+    color:gold;
+    font-size: 50px;
+
+
+}
+.boxje .content{
+    margin-left:150px;
+    padding-left:20px;
+    column-count:3;
+    column-gap: 10px;
+    column-width:150px;
+
+}
+.boxje .content h1 {
+    color: Gold;
+    margin-bottom: 50px;
+    fon-size: 50px;
+
+
+}
+.boxje .content p1{
+    color:white;
+    font-size:30px;
+    line-height:30pt;
+
+}
+
+
+
 .bar{
     width:50px;
     height:10px;
