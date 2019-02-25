@@ -3,9 +3,30 @@
     margin: 0 auto;
 }
 
-table.characters{
-    table-layout: auto;
+.maintable{
     width: 100%;
+}
+
+.maintable__th {
+    text-align: center;
+    color: white;
+    background-color: gold;
+    border: 2px solid darkgray;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+}
+
+.maintable__td {
+    color: black;
+    text-align: center;
+    background: rgba(255,215,0,0.5);
+}
+
+.maintable--characters{
+    table-layout: auto;
     border-collapse: collapse;
     margin-top: 325px;
     position: static;
@@ -13,50 +34,17 @@ table.characters{
     min-width: 1500px;
 }
 
-table.characters th {
-    text-align: center;
-    color: white;
-    background-color: gold;
-    border: 2px solid darkgray;
+.maintable--characters__th {
     border-collapse: collapse;
     padding: 10px;
-    text-shadow:
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
 }
 
-table.authortable {
-    width: 100%;
-}
-table.authortable th {
-    text-align: center;
-    color: white;
-    background-color: gold;
-    border: 2px solid darkgray;
-    text-shadow:
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
-}
-
-table.authortable td {
-    color: black;
-    text-align: center;
-    background: rgba(255,215,0,0.5);
-}
-
-table.characters td{
-    text-align: center;
-    color: black;
-    background: rgba(255,215,0,0.5);
+.maintable--characters__td {
     padding: 6px;
     border: 2px solid darkgray;
 }
 
-table.characters img{
+.maintable--characters__img{
     height: 50%;
     padding: 5px;
 }
@@ -120,16 +108,16 @@ nav a:hover {
     text-align: center;
     margin: 14%;
     }
-.legendtext a:link{
+.legendtext__a:link{
     color: black;
 }
-.legendtext a:visited{
+.legendtext__a:visited{
     color: black;
 }
-.legendtext a:hover{
+.legendtext__a:hover{
     color: white;
 }
-.legendtext a:active{
+.legendtext__a:active{
     color: lightgray;
 }
 
@@ -236,21 +224,26 @@ table, th, td {
     max-width: 100px;
 }
 
-.Letters{
+.letters{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 35%;
     margin-top:10%;
 }
-.HeadText{
+.headText{
     color: gold;
     text-align: center;
     text-shadow: 0.016em 0 black, 0 0.016em black, -0.016em 0 black, 0 -0.016em black;
     font-size: 50px;
     margin-top: 5%;
-
 }
+
+.headText--characters{
+    margin-top: 10%;
+    font-size: 75px;
+}
+
 .text{
     color:white;
     text-align:center;
@@ -268,6 +261,13 @@ table, th, td {
     margin-top:2%;
 
 }
+
+.authortext--2 {
+    color: gold;
+    font-size: 30px;
+    line-height: 40pt;
+}
+
 .map1{
     display: block;
     margin-left: 4%;
@@ -301,34 +301,23 @@ table, th, td {
     margin-top:10px;
 }
 
-.maptext1 a:link{
+.maptext1__a:link{
     color: azure;
 }
-.maptext1 a:visited{
+.maptext1__a:visited{
     color: azure;
 }
 
-.authortext2 {
-    color: gold;
-    text-align: center;
-    font-size: 30px;
-    margin: 10%;
-    margin-top: 2%;
-    line-height: 40pt;
-}
-
-.Characterstextstar{
-    color: white;
-    text-align: center;
+.characterstext--star{
     font-size: 10px;
 }
 
-.Characterstext{
+.characterstext{
     color: white;
     text-align: center;
 }
 
-.Characterstext a:visited{
+.characterstext__a:visited{
     color: mediumpurple;
 }
 .navigation{
@@ -362,7 +351,7 @@ table, th, td {
     overflow: hidden;
 
 }
-.summary h1{
+.summary__h1{
     font-family:Lucida Console;
     margin-top:320px;
     text-align: center;
@@ -380,21 +369,18 @@ table, th, td {
     column-width:150px;
 
 }
-.boxje .content h1 {
+.content__h2 {
     color: Gold;
     margin-bottom: 50px;
-    fon-size: 50px;
-
-
+    font-size: 45px;
 }
+
 .boxje .content p1{
     color:white;
     font-size:30px;
     line-height:30pt;
 
 }
-
-
 
 .bar{
     width:50px;
@@ -407,32 +393,36 @@ table, th, td {
 .bar:hover{
     background:#fff;
 }
+
 input[name="r"]{
     position:absolute;
     visibility: hidden;
 }
+
 .slides{
     width:300%;
     height:100%;
     display:flex;
 }
+
 .slide{
     width: 33.33%;
     transition: 0.4s;
 }
-.slide img{
+
+.slide__img{
     width:100%;
     height:100%;
 }
+
 #r1:checked ~ .s1{
     margin-left:0;
-
 }
+
 #r2:checked ~ .s1{
     margin-left:-33.33%;
-
 }
+
 #r3:checked ~ .s1{
     margin-left:-67%;
-
 }
