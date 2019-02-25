@@ -2,7 +2,6 @@
     width: 90%;
     margin: 0 auto;
 }
-
 .flexcont{
     display: flex;
 }
@@ -22,7 +21,6 @@
     padding: 10px;
     word-wrap:break-word;
     margin-top:100px;
-
 }
 .add{
     width:800px;
@@ -34,9 +32,7 @@
     margin-top:80px;
     margin-left:auto;
     margin-right:auto;
-
 }
-
 .add .book{
     position:absolute;
     height:300px;
@@ -44,7 +40,6 @@
     margin-left:-210px;
 }
 .col{
-
     width:25%;
     height: 100%;
     border: 1px solid #777777;
@@ -53,12 +48,10 @@
     padding: 10px;
     word-wrap:break-word;
     margin-top:120px;
-
 }
 .col__p{
     color:white;
     margin-top:50px;
-
 }
 .col__h2{
     position:absolute;
@@ -67,19 +60,15 @@
     color:gold;
     font-size:30px;
 }
-
 .col--intro__h2{
     margin-left: 7%;
 }
-
 .col--films__h2{
     margin-left: 7%;
 }
-
 .col--music__h2{
     margin-left: 5%;
 }
-
 .maintable__th {
     text-align: center;
     color: white;
@@ -91,13 +80,11 @@
             -1px 1px 0 #000,
             1px 1px 0 #000;
 }
-
 .maintable__td {
     color: black;
     text-align: center;
     background: rgba(255,215,0,0.5);
 }
-
 .maintable--characters{
     table-layout: auto;
     border-collapse: collapse;
@@ -106,32 +93,18 @@
     max-width: 2000px;
     min-width: 1500px;
 }
-
 .maintable--characters__th {
     border-collapse: collapse;
     padding: 10px;
 }
-
 .maintable--characters__td {
     padding: 6px;
     border: 2px solid darkgray;
 }
-
 .maintable--characters__img{
     height: 50%;
     padding: 5px;
 }
-
-.shadowSauron {
-    position: absolute;
-    width: 150px;
-    height: 200px;
-    box-shadow: inset 0px 0px 0px 5px rgba(255,215,0,0.5);
-    border-radius: 5px;
-    top: 703px;
-    left: 1338px;
-}
-
 header {
     background: rgba(160, 160, 160, 0.5);
 }
@@ -164,7 +137,6 @@ nav a{
 nav a:hover {
     color: White;
 }
-
 .legenda {
     display: block;
     background-color: gold;
@@ -172,15 +144,13 @@ nav a:hover {
     width: 200px;
     height: 350px;
     margin-top: 6%;
-
 }
-
 .legendtext {
     color: slategrey;
     font-size: 22px;
     text-align: center;
     margin: 14%;
-    }
+}
 .legendtext__a:link{
     color: black;
 }
@@ -193,7 +163,6 @@ nav a:hover {
 .legendtext__a:active{
     color: lightgray;
 }
-
 body{
     background-color: black;
     background-image: url(IMG/background.jpg);
@@ -208,7 +177,6 @@ body{
     background-size: 100%;
     background-attachment:fixed;
     background-position: 0px -70px
-
 }
 .tolkien{
     display: block;
@@ -218,13 +186,10 @@ body{
     max-height: 400px;
     max-width: 400px;
 }
-
-
 .middle{
     margin-top: 10px;
     position: relative;
     width: 80%;
-
 }
 .middle .img{
     display: block;
@@ -268,7 +233,6 @@ body{
     cursor: pointer;
     border-radius: 50%;
 }
-
 .middle .btn4 {
     position: absolute;
     top: 130px;
@@ -280,7 +244,6 @@ body{
     cursor: pointer;
     border-radius: 50%;
 }
-
 .middle .btn5 {
     position: absolute;
     top: 100px;
@@ -292,11 +255,9 @@ body{
     cursor: pointer;
     border-radius: 50%;
 }
-
 table, th, td {
     border: 1px solid white;
 }
-
 .tablepic{
     display: block;
     margin-left: auto;
@@ -305,7 +266,6 @@ table, th, td {
     max-height: 100px;
     max-width: 100px;
 }
-
 .letters{
     display: block;
     margin-left: auto;
@@ -320,17 +280,14 @@ table, th, td {
     font-size: 50px;
     margin-top: 5%;
 }
-
 .headText--characters{
     margin-top: 10%;
     font-size: 75px;
 }
-
 .headText--summary{
     margin-top: 10%;
     font-size: 60px;
 }
-
 .text{
     color:white;
     text-align:center;
@@ -339,29 +296,24 @@ table, th, td {
     margin-top:30%;
     line-height:40pt;
 }
-
 .authortext{
     color:white;
     text-align:center;
     font-size:20px;
     margin: 10%;
     margin-top:2%;
-
 }
-
 .authortext--2 {
     color: gold;
     font-size: 30px;
     line-height: 40pt;
 }
-
 .map1{
     display: block;
     margin-left: 4%;
     margin-right: 4%;
     margin-top: 0px;
 }
-
 .map{
     display: block;
     border: 1px solid white ;
@@ -387,23 +339,19 @@ table, th, td {
     margin: 10px;
     margin-top:10px;
 }
-
 .maptext1__a:link{
     color: azure;
 }
 .maptext1__a:visited{
     color: azure;
 }
-
 .characterstext--star{
     font-size: 10px;
 }
-
 .characterstext{
     color: white;
     text-align: center;
 }
-
 .characterstext__a:visited{
     color: mediumpurple;
 }
@@ -435,7 +383,6 @@ table, th, td {
     width:300px;
     height:400px;
     overflow: hidden;
-
 }
 .summary__h1{
     font-family:Lucida Console;
@@ -444,8 +391,6 @@ table, th, td {
     text-shadow: 0.016em 0 black, 0 0.016em black, -0.016em 0 black, 0 -0.016em black;
     font-size: 50px;
     margin-top: 10%;
-
-
 }
 .boxje .content{
     margin-left:150px;
@@ -453,25 +398,18 @@ table, th, td {
     column-count:3;
     column-gap: 10px;
     column-width:150px;
-
 }
 .content__h2 {
     color: Gold;
     margin-bottom: 50px;
     font-size: 28px;
     padding-right:20px
-
-
-
 }
-
 .boxje .content p1{
     color:white;
     font-size:30px;
     line-height:30pt;
-
 }
-
 .bar{
     width:50px;
     height:10px;
@@ -483,36 +421,29 @@ table, th, td {
 .bar:hover{
     background:#fff;
 }
-
 input[name="r"]{
     position:absolute;
     visibility: hidden;
 }
-
 .slides{
     width:300%;
     height:100%;
     display:flex;
 }
-
 .slide{
     width: 33.33%;
     transition: 0.4s;
 }
-
 .slide__img{
     width:100%;
     height:100%;
 }
-
 #r1:checked ~ .s1{
     margin-left:0;
 }
-
 #r2:checked ~ .s1{
     margin-left:-33.33%;
 }
-
 #r3:checked ~ .s1{
     margin-left:-67%;
 }
