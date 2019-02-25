@@ -165,14 +165,14 @@ nav a:hover {
 }
 body{
     background-color: black;
-    background-image: url(IMG/background.jpg);
+    background-image: url(img/background.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 0px -70px
 }
 .backgr{
     background-color: black;
-    background-image: url(IMG/background.jpg);
+    background-image: url(img/background.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment:fixed;
