@@ -3,7 +3,72 @@
     margin: 0 auto;
 }
 
-.maintable{
+.flexcont{
+    display: flex;
+}
+.flexaround{
+    justify-content:space-around;
+}
+.col1{
+    width:60%;
+    color:white;
+    font-size:20px;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    border: 1px solid #777777;
+    border-radius: 8px;
+    background-color: rgba(144, 142, 140, 0.6);
+    padding: 10px;
+    word-wrap:break-word;
+    margin-top:100px;
+
+}
+.add{
+    width:800px;
+    color:white;
+    font-size:20px;
+    text-align: center;
+    padding: 10px;
+    word-wrap:break-word;
+    margin-top:80px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.add .book{
+    position:absolute;
+    height:300px;
+    margin-top:-370px;
+    margin-left:-210px;
+}
+.col{
+
+    width:25%;
+    height: 100%;
+    border: 1px solid #777777;
+    border-radius: 8px;
+    background-color: rgba(144, 142, 140, 0.6);
+    padding: 10px;
+    word-wrap:break-word;
+    margin-top:120px;
+
+}
+.col p{
+    color:white;
+    margin-top:10px;
+
+}
+.col h{
+    position:absolute
+    text-align:center;
+    margin-left:20%;
+    color:gold;
+    font-size:30px;
+}
+table.characters{
+    table-layout: auto;
     width: 100%;
 }
 
@@ -127,6 +192,15 @@ body{
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 0px -70px
+}
+.backgr{
+    background-color: black;
+    background-image: url(IMG/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment:fixed;
+    background-position: 0px -70px
+
 }
 .tolkien{
     display: block;
@@ -327,18 +401,17 @@ table, th, td {
     transform: translateX(-50%);
     display:flex;
 }
-.boxje{
-    position: absolute;
-    margin-top:1500px;
-
+.summary .boxje{
+    position: relative;
+    top:280px;
     width:80%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    left: 200px;
+    max-width:1800px;
+    'transform: translate(-50%,-50%);
     padding: 20px;
     box-sizing: border-box;
     border-radius:4px;
     display: flex;
-
 }
 .boxje .middle{
     position: absolute;
@@ -355,9 +428,9 @@ table, th, td {
     font-family:Lucida Console;
     margin-top:320px;
     text-align: center;
-    margin-left:28px;
-    color:gold;
-    font-size: 40px;
+    text-shadow: 0.016em 0 black, 0 0.016em black, -0.016em 0 black, 0 -0.016em black;
+    font-size: 50px;
+    margin-top: 10%;
 
 
 }
@@ -372,7 +445,11 @@ table, th, td {
 .content__h2 {
     color: Gold;
     margin-bottom: 50px;
-    font-size: 45px;
+    font-size: 28px;
+    padding-right:20px
+
+
+
 }
 
 .boxje .content p1{
