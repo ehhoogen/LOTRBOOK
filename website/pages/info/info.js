@@ -2,9 +2,6 @@ function insertAllContent() {
     styleBody(document.getElementById("body"));
     addNav();
     styleNav(document.getElementById("nav1"));
-    addTextElement();
-    styleElement(document.getElementById("firstElement"), "gold", "45vw", "0", "20px");
-
 }
 
 function addNav () {
@@ -19,22 +16,10 @@ function addNav () {
     }
 }
 
-function addTextElement () {
-    // create a new div element
-    var newDiv = document.createElement("div");
-    // give the new div an id
-    newDiv.id = "firstElement";
-    // and give it some content
-    var newContent = document.createTextNode("Hi there and greetings!");
-    // add the text node to the newly created div
-    newDiv.appendChild(newContent);
-    //
-    document.getElementById("div1").appendChild(newDiv);
-}
-
 function styleBody(body){
-    body.style.width = "100%";
+    body.style.width = "98vw";
     body.style.height = "100vh";
+    body.style.backgroundColor = "black";
     body.style.backgroundImage = "url('../../img/background.jpg')";
     body.style.backgroundPosition = "0 -70px";
     body.style.backgroundSize = "100%";
@@ -42,27 +27,19 @@ function styleBody(body){
 }
 
 function styleNav(nav){
-    nav.style.width = "1503px";
-    nav.style.height = "53px";
+    nav.style.width = "97.85vw";
+    nav.style.height = "7.1vh";
     nav.style.backgroundColor = "rgba(160, 160, 160, 0.5)";
     nav.style.float = "left";
     for(let i = 1; i <= nav.childElementCount; i++){
         nav.childNodes[i].style.float = "right";
         nav.childNodes[i].style.textAlign = "center";
-        nav.childNodes[i].style.padding = "15px 45px 0 50px";
         nav.childNodes[i].style.fontSize = "16px";
-        nav.childNodes[i].style.marginTop = "20px";
+        nav.childNodes[i].style.margin = "4.7vh 2.97vw 0 3.15vw";
         nav.childNodes[i].style.color = "black";
         nav.childNodes[i].style.textDecoration = "none";
         nav.childNodes[i].style.textTransform = "uppercase";
         nav.childNodes[i].addEventListener("mouseover", function() { nav.childNodes[i].style.color = "white"; });
         nav.childNodes[i].addEventListener("mouseout", function() { nav.childNodes[i].style.color = "black"; });
     }
-}
-
-function styleElement (element, color, marginleft, margintop, fontsize) {
-    element.style.color = color;
-    element.style.marginLeft = marginleft;
-    element.style.marginTop = margintop;
-    element.style.fontSize = fontsize;
 }
