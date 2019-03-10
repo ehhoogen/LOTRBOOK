@@ -2,11 +2,55 @@ function insertAllContent() {
     styleBody(document.getElementById("body"));
     addNav();
     styleNav(document.getElementById("nav1"));
-    addTextElement("author", "authortext", "Author: J.R.R. Tolkien");
-    addTextElement("genre", "genretext", "Genre: Literature & Fiction");
-    addTextElement()
-    styleElement(document.getElementById("author"), "gold", "50%", "30px", "50px");
-    styleElement(document.getElementById("genre"), "gold", "50%", "60px", "50px");
+    addTextElement("title", "titletext", "Lord of the Rings: The Fellowship of the Ring");
+    addTextElement("titletext", "authortext", "Author: J.R.R. Tolkien");
+    addTextElement("authortext", "genretext", "Genre: Literature & Fiction");
+    addTextElement("genretext", "publishertext", "Publisher: The Saul Zaentz Company");
+    addTextElement("publishertext", "pagestext", "Number of pages: 432");
+    addTextElement("pagestext", "ISBMtext", "ISBM: 978-0547928210");
+    addTextElement("ISBMtext", "ratingtext", "Average Amazon rating: 4,7/5");
+    addIMGElement("ratingtext", "img1", "img/slider1.jpg") //dit is nog een probeersel
+    ////////////////////////////////////////////////////////////////////////////////////////
+    addTextElement("title", "title2text", "Lord of the Rings: The Two Towers");
+    addTextElement("title2text", "author2text", "Author: J.R.R. Tolkien");
+    addTextElement("author2text", "genre2text", "Genre: Literature & Fiction");
+    addTextElement("genre2text", "publisher2text", "Publisher: The Saul Zaentz Company");
+    addTextElement("publisher2text", "pages2text", "Number of pages: 352");
+    addTextElement("pages2text", "ISBM2text", "ISBM: 978-0547928203");
+    addTextElement("ISBM2text", "rating2text", "Average Amazon rating: 4,9/5");
+    /////////////////////////////////////////////////////////////////////////////////////
+    addTextElement("title", "title3text", "Lord of the Rings: The Return of the King");
+    addTextElement("title3text", "author3text", "Author: J.R.R. Tolkien");
+    addTextElement("author3text", "genre3text", "Genre: Literature & Fiction");
+    addTextElement("genre3text", "publisher3text", "Publisher: The Saul Zaentz Company");
+    addTextElement("publisher3text", "pages3text", "Number of pages: 432");
+    addTextElement("pages3text", "ISBM3text", "ISBM: 978-0547928197");
+    addTextElement("ISBM3text", "rating3text", "Average Amazon rating: 4,8/5");
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    styleElement(document.getElementById("titletext"), "gold", "0%", "0px", "35px", "rgb(0,0,0,0.0)", "66%");
+    styleElement(document.getElementById("authortext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)");
+    styleElement(document.getElementById("genretext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)");
+    styleElement(document.getElementById("publishertext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)");
+    styleElement(document.getElementById("pagestext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)");
+    styleElement(document.getElementById("ISBMtext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)");
+    styleElement(document.getElementById("ratingtext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)");
+    /////////////////////////////////////////////////////////////////////////////////////////////////
+    styleElement(document.getElementById("title2text"), "gold", "33%", "0px", "35px", "rgb(0,0,0,0.0)", "33%");
+    styleElement(document.getElementById("author2text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)", );
+    styleElement(document.getElementById("genre2text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)",);
+    styleElement(document.getElementById("publisher2text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)",);
+    styleElement(document.getElementById("pages2text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)",);
+    styleElement(document.getElementById("ISBM2text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)",);
+    styleElement(document.getElementById("rating2text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)");
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    styleElement(document.getElementById("title3text"), "gold", "66%", "0px", "35px", "rgb(0,0,0,0.0)", "0%");
+    styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)", );
+    styleElement(document.getElementById("genre3text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)",);
+    styleElement(document.getElementById("publisher3text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)",);
+    styleElement(document.getElementById("pages3text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)",);
+    styleElement(document.getElementById("ISBM3text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)",);
+    styleElement(document.getElementById("rating3text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)");
+    //////////////////////////////////////////////////////////////////////////////////////////////////
 
 }
 
@@ -22,6 +66,18 @@ function addNav () {
         newLink.appendChild(newContent);
         document.getElementById("nav1").appendChild(newLink);
     }
+}
+
+function addIMGElement(id, newid, source) {
+    var newDiv = document.createElement("div");
+    newDiv.id = newid;
+    var newContent = document.createElement("img");
+    newContent.src = source;
+    newContent.setAttribute("height", "100%");
+    newContent.setAttribute("width", "100%");
+    newContent.setAttribute("alt", "this image is not loaded correctly")
+    newDiv.appendChild(newContent);
+    document.getElementById(id).appendChild(newDiv);
 }
 
 function addTextElement (id, newid, text) {
@@ -66,3 +122,12 @@ function styleNav(nav){
         nav.childNodes[i].addEventListener("mouseout", function() { nav.childNodes[i].style.color = "black"; });
     }
 }
+function styleElement (element, color, marginleft, margintop, fontsize,rgba, marginright) {
+    element.style.color = color;
+    element.style.marginLeft = marginleft;
+    element.style.marginTop = margintop;
+    element.style.fontSize = fontsize;
+    element.style.backgroundColor = rgba;
+    element.style.marginRight = marginright;
+}
+
