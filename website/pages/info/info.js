@@ -2,14 +2,14 @@ function insertAllContent() {
     styleBody(document.getElementById("body"));
     addNav();
     styleNav(document.getElementById("nav1"));
-    addTextElement("title", "titletext", "Lord of the Rings: The Fellowship of the Ring");
-    addTextElement("titletext", "authortext", "Author: J.R.R. Tolkien");
+    addTextElement("title", "titletext", "Lord of the Rings: The Fellowship of the Ring"); //de titel node vertakt in 3 verschillende bomen (1 voor elk boek)
+    addTextElement("titletext", "authortext", "Author: J.R.R. Tolkien");                    // elk boek heeft zelf een lineare boom die steeds van 1 node vertakt naar 1 andere node
     addTextElement("authortext", "genretext", "Genre: Literature & Fiction");
     addTextElement("genretext", "publishertext", "Publisher: The Saul Zaentz Company");
     addTextElement("publishertext", "pagestext", "Number of pages: 432");
     addTextElement("pagestext", "ISBMtext", "ISBM: 978-0547928210");
     addTextElement("ISBMtext", "ratingtext", "Average Amazon rating: 4,7/5");
-    addIMGElement("ratingtext", "img1", "img/slider1.jpg") //dit is nog een probeersel
+    addIMGElement("ratingtext", "img1", "img/slider1.jpg") //probeer er een plaatje in te krijgen
     ////////////////////////////////////////////////////////////////////////////////////////
     addTextElement("title", "title2text", "Lord of the Rings: The Two Towers");
     addTextElement("title2text", "author2text", "Author: J.R.R. Tolkien");
@@ -68,8 +68,8 @@ function addNav () {
     }
 }
 
-function addIMGElement(id, newid, source) {
-    var newDiv = document.createElement("div");
+function addIMGElement(id, newid, source) {                                //dit is mijn pging tot het bouwen van een functie die een imgnode maakt
+    var newDiv = document.createElement("div");                   // gaat alleen niet helemaal goed, maar weet niet wat er fout gaat helaas
     newDiv.id = newid;
     var newContent = document.createElement("img");
     newContent.src = source;
