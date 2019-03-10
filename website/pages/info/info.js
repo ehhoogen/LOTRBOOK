@@ -3,9 +3,10 @@ function insertAllContent() {
     addNav();
     styleNav(document.getElementById("nav1"));
     addTextElement("author", "authortext", "Author: J.R.R. Tolkien");
-    addTextElement("div2");
+    addTextElement("genre", "genretext", "Genre: Literature & Fiction");
+    addTextElement()
     styleElement(document.getElementById("author"), "gold", "50%", "30px", "50px");
-    styleElement(document.getElementById("div2"), "blue", "400px", "60px", "20px");
+    styleElement(document.getElementById("genre"), "gold", "50%", "60px", "50px");
 
 }
 
