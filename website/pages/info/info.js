@@ -2,11 +2,18 @@ function insertAllContent() {
     styleBody(document.getElementById("body"));
     addNav();
     styleNav(document.getElementById("nav1"));
+    addTextElement("author", "authortext", "Author: J.R.R. Tolkien");
+    addTextElement("div2");
+    styleElement(document.getElementById("author"), "gold", "50%", "30px", "50px");
+    styleElement(document.getElementById("div2"), "blue", "400px", "60px", "20px");
+
 }
 
 function addNav () {
     var names = ["Home", "Info", "Summary", "Characters", "Author", "Middle-Earth"];
     var links = ["../../home.html", "#", "../../summary.html", "../../characters.html", "../../author.html", "../../map.html"];
+
+
     for(let i = names.length; i > 0; i--) {
         var newContent = document.createTextNode(names[i-1]);
         var newLink = document.createElement("a");
@@ -14,6 +21,20 @@ function addNav () {
         newLink.appendChild(newContent);
         document.getElementById("nav1").appendChild(newLink);
     }
+}
+
+function addTextElement (id, newid, text) {
+    // create a new div element
+    var newDiv = document.createElement("div");
+    // give the new div an id
+    newDiv.id = newid
+    // and give it some content
+    var newContent = document.createTextNode(text);
+    // add the text node to the newly created div
+    newDiv.appendChild(newContent);
+    //
+    document.getElementById(id).appendChild(newDiv);
+
 }
 
 function styleBody(body){
@@ -25,6 +46,7 @@ function styleBody(body){
     body.style.backgroundSize = "100%";
     body.style.backgroundRepeat = "no-repeat";
 }
+
 
 function styleNav(nav){
     nav.style.width = "97.85vw";
