@@ -3,9 +3,17 @@ function colsel()
     a=document.getElementById("tselect").value;
     var appear = document.getElementById('cselect').value;
     numb=parseInt(appear);
+    console.log(a);
     var list=a.split(',');
+    console.log(a);
     for (var j=0;j<list.length;j++) {
-        var all = document.getElementById(list[j]).querySelectorAll("*");
+
+        if(a=="body"){
+            var all=document.getElementsByTagName("*");
+        }
+        else{
+            var all = document.getElementById(list[j]).querySelectorAll("*");
+        }
 
         for (var i = 0, max = all.length; i < max; i++) {
             all[i].style.color = appear;
@@ -14,7 +22,7 @@ function colsel()
         for (var i = 0, max = all.length; i < max; i++) {
             stylo = window.getComputedStyle(all[i], null).getPropertyValue('font-size');
             currentSize = parseInt(stylo);
-            all[i].style.fontSize = (currentSize+numb) + 'px';
+            all[i].style.fontSize = (currentSize+(numb/10)) + 'px';
         }
         /*if (list.length<=1){
             var all = document.getElementById(list[0]);
