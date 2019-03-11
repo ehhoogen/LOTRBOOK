@@ -2,13 +2,13 @@ function insertAllContent() {
     styleBody(document.getElementById("body"));
     addNav();
     styleNav(document.getElementById("nav1"));
-    let tolkien = new Author("J.R.R. Tolkien","03-01-1892");
+    /*let tolkien = new Author("J.R.R. Tolkien","03-01-1892");
     let theFellowshipOfTheRing = new LordOfTheRings("The Fellowship of the Ring", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
     let theTwoTowers = new LordOfTheRings("The Two Towers", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
     let theReturnOfTheKing = new LordOfTheRings("The Return of the King", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
     let FOTR = new Book("The Fellowship of the Ring", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
     let TTT = new Book("The Two Towers", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
-    let ROTK = new Book("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
+    let ROTK = new Book("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");*/
     ///////////////////////////////////////////////////////////////////////////////////
     /*addTextElement("title", "titletext", "Lord of the Rings: The Fellowship of the Ring"); //de titel node vertakt in 3 verschillende bomen (1 voor elk boek)
     addTextElement("titletext", "authortext", "Author: J.R.R. Tolkien");                    // elk boek heeft zelf een lineare boom die steeds van 1 node vertakt naar 1 andere node
@@ -114,7 +114,7 @@ class LordOfTheRings extends Book{
         super(pages);
         super(ISBN);
         super(rating);
-        this._series = series;
+        this.series = series;
     }
 }
 
