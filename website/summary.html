@@ -7,12 +7,31 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/title_icon.jpg" />
 </head>
 <body>
-<Header>
+<header id="head">
+    <script type="text/javascript" src="Jsmenu.js"></script>
     <div class="container">
+        <div class="drops">
+        <select id="tselect" >
+            <option>Select text</option>
+            <option value="nav1,tselect,cselect">Header</option>
+            <option value="tit">Title</option>
+            <option value="sec1">Sections</option>
+        </select>
+        <select id="cselect" onchange="colsel();">
+            <option>Text appearance</option>
+            <option value="Blue">Text Color:Blue</option>
+            <option value="Red">Text Color:Red</option>
+            <option value="Purple">Text Color:Purple</option>
+            <option value="White">Text Color:White</option>
+            <option value=-10>Font Size -10 px</option>
+            <option value=10>Font Size +10 px</option>
 
+
+        </select>
+        </div>
         <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
+            <ul id="nav1">
+                <li ><a href="home.html">Home</a></li>
                 <li><a href="pages/info/info.html">Info</a></li>
                 <li><a href="#">Summary</a></li>
                 <li><a href="characters.html">Characters</a></li>
@@ -21,10 +40,10 @@
             </ul>
         </nav>
     </div>
-</Header>
+</header>
 
 <div class="summary">
-    <h1 class="headText headText--summary">
+    <h1 class="headText headText--summary" id="tit">
         A summary of the Lord of the Rings trilogy
     </h1>
     <div class="boxje">
@@ -53,7 +72,7 @@
             </div>
         </div>
 
-    <div class="content">
+    <section class="content" id="sec1">
         <h2 class="content__h2">
             The Fellowship of the ring
         </h2>
@@ -74,7 +93,7 @@
         <p1>
             The War of the Ring reaches its climax as the dark lord Sauron sets his sights on Minas Tirith, the capital of Gondor. The members of the fellowship in Rohan are warned of the impending attack when Pippin cannot resist looking into Saruman's palantír and is briefly contacted by the dark lord. King Théoden is too proud to send his men to help without being asked, so Gandalf and Pippin ride to Minas Tirith to see that this request is sent. They meet opposition there from Denethor, steward of the city and father of Faramir and the late Boromir. Denethor's family has acted as temporary guardians of Gondor for centuries until a member of the true line of kings returns. This member is none other than Aragorn, who must overcome his own self-doubt before he can take on the role he was destined to fulfill. Meanwhile, Frodo and Sam continue to carry the One Ring towards Mordor, guided by Gollum. What they don't know is that Gollum is leading them into a trap so that he can reclaim the Ring for himself. Though Sam suspects his deceit, Frodo is starting to be corrupted by the Ring's power and the mistrust of Sam this causes is fully exploited by Gollum. The only way good can prevail in this contest is if the Ring is destroyed, an event that is becoming harder every minute for Frodo to achieve. The fate of every living creature in Middle Earth will be decided once and for all as the Quest of the Ringbearer reaches its climax.
         </p1>
-    </div>
+    </section>
 </div>
 </body>
 </html>
