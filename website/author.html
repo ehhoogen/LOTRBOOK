@@ -4,26 +4,54 @@
     <meta charset="UTF-8" name="description" content="This page will give the most important information about Tolkiens life.">
     <title>LOTR - Author</title>
     <link rel ="stylesheet" type="text/css" href="style.css"/>
-    <link rel="shortcut icon" type="image/x-icon" href="IMG/title_icon.jpg" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/title_icon.jpg" />
 </head>
 <body>
-<Header>
+<header id="head">
+    <script type="text/javascript" src="Jsmenu.js"></script>
     <div class="container">
+        <div class="drops">
+        <select id="tselect" >
+            <option>Select text</option>
+            <option value="nav1,tselect,cselect">Header</option>
+            <option value="scroll">Scroll Bar</option>
+            <option value="Tolkien">Title</option>
+            <option value="Childhood,Early life,Later life,Books written,Legacy">Sections</option>
+            <option value="art,art1,art2,art3">Article</option>
+        </select>
+        <select id="cselect" onchange="colsel();">
+            <option>Text appearance</option>
+            <option value="Blue">Text Color:Blue</option>
+            <option value="Red">Text Color:Red</option>
+            <option value="Purple">Text Color:Purple</option>
+            <option value="White">Text Color:White</option>
+            <option value=-10>Font Size -10 px</option>
+            <option value=10>Font Size +10 px</option>
+
+
+        </select>
+        </div>
         <nav>
+<<<<<<< HEAD:untitled1/author.html
+            <ul id="nav1">
+                <li ><a href="home.html">Home</a></li>
+=======
             <ul>
                 <li><a href="home.html">Home</a></li>
+                <li><a href="pages/info/info.html">Info</a></li>
+>>>>>>> 31ea19dc36a52c67ef0ba2f842c020d26e2aee8b:website/author.html
                 <li><a href="summary.html">Summary</a></li>
                 <li><a href="characters.html">Characters</a></li>
-                <li><a href="#">Author</a></li>
-                <li><a href="map.html">Middle-earth</a> </li>
+                <li><a href="author.html">Author</a></li>
+                <li><a href="map.html">Middle-Earth</a></li>
             </ul>
         </nav>
     </div>
-</Header>
+</header>
 
 <Header>
 
-    <div class="legenda">
+    <div class="legenda" id="scroll">
         <div class="legendtext">
             <a class="legendtext__a" href="#Tolkien">J.R.R. Tolkien</a>
         </div>
@@ -48,21 +76,28 @@
 
 <div class="headText">
     <section id="Tolkien">
-    John Ronald Reuel Tolkien
+<<<<<<< HEAD:untitled1/author.html
+        <h>John Ronald Reuel Tolkien</h>
+=======
+        John Ronald Reuel Tolkien
+>>>>>>> 31ea19dc36a52c67ef0ba2f842c020d26e2aee8b:website/author.html
     </section>
     <div class="authortext">
-    <img src="IMG/lotrBoeken.jpg" alt="The Lord of the Rings trilogy" class="Tolkien">
+        <img src="img/lotrBoeken.jpg" alt="The Lord of the Rings trilogy" class="Tolkien">
     </div>
 
 </div>
 <div class="authortext authortext--2">
     <section id="Childhood">
-        The childhood of Tolkien
-    </section>
+        <h>
+            The childhood of Tolkien
+        </h>
+
+
         <div class="picture">
-            <img src="IMG/youngTolkien.jpg" alt="Young Tolkien" class="tolkien">
+            <img src="img/youngTolkien.jpg" alt="Young Tolkien" class="tolkien">
         </div>
-        <div class="authortext">
+        <div class="authortext" id="sec1">
             John was born in what is now South-Africa in 1892.
             His father Arthur Reuel Tolkien was a bank manager and his mother Mabel Suffield stayed at home to watch the kids.
             When John was 3 years old His mother took him and his brother, who was 1 year old at the time, to England for a lengthy family visit which turned out to be a permanent one when his father died and is mother was left without any income and was forced to move back with her parents.
@@ -72,12 +107,17 @@
             Francis was an upper-class man who taught John everything about catholism.
             In 1903 John won a scholarship at king Edwards school in Birmingham.
         </div>
-
-    <section id="Early life">
-        The early life of Tolkien
+<<<<<<< HEAD:untitled1/author.html
     </section>
+
+=======
+>>>>>>> 31ea19dc36a52c67ef0ba2f842c020d26e2aee8b:website/author.html
+    <section id="Early life">
+        <h>The early life of Tolkien</h>
+
+
     <div class="picture">
-        <img src="IMG/teenTolkien.jpg" alt="Teenage Tolkien" class="tolkien">
+        <img src="img/teenTolkien.jpg" alt="Teenage Tolkien" class="tolkien">
     </div>
     <div class="authortext">
         In 1911 Tolkien went on a holiday to Switzerland.
@@ -103,12 +143,12 @@
         In 1918 John was deemed fit for the military again and was stationed in Hull where nothing happened until the end of the war.
         In 1920 John left the military and started a new job at the Oxford English Dictionary.
     </div>
-
-    <section id="Later life">
-        The later life of Tolkien
     </section>
+    <section id="Later life">
+        <h>The later life of Tolkien</h>
+
     <div class="picture">
-        <img src="IMG/tolkienWOI.jpg" alt="Middle age Tolkien" class="Tolkien">
+        <img src="img/tolkienWOI.jpg" alt="Middle age Tolkien" class="Tolkien">
     </div>
     <div class="authortext">
         In 1925 John started working at the Pembroke college.
@@ -128,103 +168,116 @@
         On 2 september John Ronald Reuel Tolkien died of a chest infection at the age of 81.
         He was burried in the same grave as his beloved wife Edith.
     </div>
-    <section id="Books written">
-        Work published
     </section>
+    <section id="Books written">
+        <h>Work published</h>
+
+
     <div class="authortext">
         Throughout his life John wrote a lot of short stories and essays of which most were not published before his death.
         After his death his children, mostly Christopher Tolkien, took it upon themselve to extend their fathers legacy and edit/publish his unfinished works.
-
     </div>
-    <div class="authortext">
+<<<<<<< HEAD:untitled1/author.html
+    </section>
+    <div class="authortext" id="art" >
 
+        <h>Early Published works:</h>
+=======
+    <div class="authortext">
         Early Published works:
+>>>>>>> 31ea19dc36a52c67ef0ba2f842c020d26e2aee8b:website/author.html
         <table class="maintable">
-            <tr>
+            <tr >
                 <th class="maintable__th"></th>
                 <th class="maintable__th">Title</th>
                 <th class="maintable__th">Published in</th>
                 <th class="maintable__th">Small description</th>
             </tr>
-            <tr>
+<<<<<<< HEAD:untitled1/author.html
+            <tr >
                 <td class="maintable__td"><img src="IMG/beowolf.jpg" alt="Beowolf" class=tablepic></td>
+=======
+            <tr>
+                <td class="maintable__td"><img src="img/beowolf.jpg" alt="Beowolf" class=tablepic></td>
+>>>>>>> 31ea19dc36a52c67ef0ba2f842c020d26e2aee8b:website/author.html
                 <td class="maintable__td">Beowolf</td>
                 <td class="maintable__td">1936</td>
                 <td class="maintable__td">A seminal lecture that was later published.</td>
             </tr>
-            <tr>
+<<<<<<< HEAD:untitled1/author.html
+            <tr >
                 <td class="maintable__td"><img src="IMG/hobbit.jpg" alt="The Hobbit" class=tablepic></td>
+=======
+            <tr>
+                <td class="maintable__td"><img src="img/hobbit.jpg" alt="The Hobbit" class=tablepic></td>
+>>>>>>> 31ea19dc36a52c67ef0ba2f842c020d26e2aee8b:website/author.html
                 <td class="maintable__td">The Hobbit</td>
                 <td class="maintable__td">1937</td>
                 <td class="maintable__td">The succes of this book made the publisher ask for a succesor, which later turned out to be the LOTR trilogy</td>
-
-
             </tr>
         </table>
-            The LOTR trilogy:
-        <table class="maintable">
+        <h>The LOTR trilogy:</h>
 
+        <table class="maintable">
             <tr>
-                <td class="maintable__td"><img src="IMG/lotr1.jpg" alt="Lord of the Rings - The Fellowship of the Ring" class=tablepic></td>
+                <td class="maintable__td"><img src="img/lotr1.jpg" alt="Lord of the Rings - The Fellowship of the Ring" class=tablepic></td>
                 <td class="maintable__td">The Fellowship of the Ring</td>
                 <td class="maintable__td">29 juli 1954</td>
                 <td class="maintable__td">The first part of the Trilogy</td>
             </tr>
-
             <tr>
-                <td class="maintable__td"><img src="IMG/lotr2.jpg" alt="Lord of the Rings - The Two Towers" class=tablepic></td>
+                <td class="maintable__td"><img src="img/lotr2.jpg" alt="Lord of the Rings - The Two Towers" class=tablepic></td>
                 <td class="maintable__td">The Two Towers</td>
                 <td class="maintable__td">11 november 1954</td>
                 <td class="maintable__td">The second part of the Trilogy</td>
             </tr>
-
             <tr>
-                <td class="maintable__td"><img src="IMG/lotr3.jpg" alt="The Lord of the Rings - The Return of the King" class=tablepic></td>
+                <td class="maintable__td"><img src="img/lotr3.jpg" alt="The Lord of the Rings - The Return of the King" class=tablepic></td>
                 <td class="maintable__td">The Return of the King</td>
                 <td class="maintable__td">20 october 1955</td>
                 <td class="maintable__td">The third and final part of the Trilogy</td>
             </tr>
         </table>
-        Post humous publications:
+        <h>Post humous publications:</h>
         <table class="maintable">
             <tr>
-                <td class="maintable__td"><img src="IMG/fatherChristmas.JPG" alt="The Father Christmas Letters" class=tablepic></td>
+                <td class="maintable__td"><img src="img/fatherChristmas.JPG" alt="The Father Christmas Letters" class=tablepic></td>
                 <td class="maintable__td">The Father Christmas Letters</td>
                 <td class="maintable__td">1976</td>
                 <td class="maintable__td">A collection of letters written by Tolkien to his children who published them after his death.</td>
-
             </tr>
-
             <tr>
-                <td class="maintable__td"><img src="IMG/silma.png" alt="The Silmarillion" class=tablepic></td>
+                <td class="maintable__td"><img src="img/silma.png" alt="The Silmarillion" class=tablepic></td>
                 <td class="maintable__td">The Silmarillion</td>
                 <td class="maintable__td">1977</td>
                 <td class="maintable__td">A collection of mythical stories edited and published by his son Cristopher.</td>
             </tr>
-
             <tr>
-                <td class="maintable__td"><img src="IMG/unfinishedTales.JPG" alt="Unifinished Tales and The History of Middle-earth" class=tablepic></td>
+                <td class="maintable__td"><img src="img/unfinishedTales.JPG" alt="Unifinished Tales and The History of Middle-earth" class=tablepic></td>
                 <td class="maintable__td">Unfinished Tales and The History of Middle-earth</td>
                 <td class="maintable__td">1980</td>
                 <td class="maintable__td">A collection of unfinished letters and stories that were edited, finished and ppublished by his son Cristopher.</td>
             </tr>
-
             <tr>
-                <td class="maintable__td"><img src="IMG/children.jpg" alt="The Children of Húrin" class=tablepic></td>
+                <td class="maintable__td"><img src="img/children.jpg" alt="The Children of Húrin" class=tablepic></td>
                 <td class="maintable__td">The Children of Húrin</td>
                 <td class="maintable__td">2007</td>
                 <td class="maintable__td">A story that John started on in 1910 but never finished until his son Cristopher finished and published it.</td>
             </tr>
-
         </table>
     </div>
-
     <div class="authortext authortext--2">
-
         <section id="Legacy">
+<<<<<<< HEAD:untitled1/author.html
+            <h>Tolkien's legacy</h>
+
+
+        <img src="IMG/lotr.jpeg" alt="A scene of a Lord of the Rings movie" class="tolkien">
+=======
             Tolkien's legacy
         </section>
-        <img src="IMG/lotr.jpeg" alt="A scene of a Lord of the Rings movie" class="tolkien">
+        <img src="img/lotr.jpeg" alt="A scene of a Lord of the Rings movie" class="tolkien">
+>>>>>>> 31ea19dc36a52c67ef0ba2f842c020d26e2aee8b:website/author.html
         <div class="authortext">
            The works of Tolkien have without a doubt had a big impact on a lot of people. Tolkien and his characters and placenames have been the namesake of street names, mountains, companies and even animal species and plants.
             Tolkien didnt get one but has seven blue plaques scattered across England.
@@ -236,8 +289,8 @@
             However they never made the film selling the rights in 1976 to Tolkien Entreprise which made an animated version of half of the trilogy without much succes.
             In 2001-2003 The Lord of the Rings trilogy was released as a trilogy of movies by New Line Cinema receiving much succes and multiple oscars.
         </div>
+        </section>
     </div>
-
 </div>
 </body>
 </html>

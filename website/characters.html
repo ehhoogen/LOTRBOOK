@@ -4,26 +4,53 @@
     <meta charset="UTF-8" name="description" content="This fantastic table will give you the most important information about the main characters in the Lord of the Rings.">
     <title>LOTR - Characters</title>
     <link rel ="stylesheet" type="text/css" href="style.css"/>
-    <link rel="shortcut icon" type="image/x-icon" href="IMG/title_icon.jpg" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/title_icon.jpg" />
 </head>
 <body>
-<Header>
+<header id="head">
+    <script type="text/javascript" src="Jsmenu.js"></script>
     <div class="container">
+        <div class="drops">
+        <select id="tselect" >
+            <option>Select text</option>
+            <option value="nav1,tselect,cselect">Header</option>
+            <option value="tit">Title</option>
+            <option value="sec1">Sections</option>
+            <option value="foot">Footer</option>
+        </select>
+        <select id="cselect" onchange="colsel();">
+            <option>Text appearance</option>
+            <option value="Blue">Text Color:Blue</option>
+            <option value="Red">Text Color:Red</option>
+            <option value="Purple">Text Color:Purple</option>
+            <option value="White">Text Color:White</option>
+            <option value=-10>Font Size -10 px</option>
+            <option value=10>Font Size +10 px</option>
+
+
+        </select>
+        </div>
         <nav>
+<<<<<<< HEAD:untitled1/characters.html
+            <ul id="nav1">
+                <li ><a href="home.html">Home</a></li>
+=======
             <ul>    
                 <li><a href="home.html">Home</a></li>
+                <li><a href="pages/info/info.html">Info</a></li>
+>>>>>>> 31ea19dc36a52c67ef0ba2f842c020d26e2aee8b:website/characters.html
                 <li><a href="summary.html">Summary</a></li>
-                <li><a href="#">Characters</a></li>
+                <li><a href="characters.html">Characters</a></li>
                 <li><a href="author.html">Author</a></li>
-                <li><a href="map.html">Middle-earth</a> </li>
+                <li><a href="map.html">Middle-Earth</a></li>
             </ul>
         </nav>
     </div>
-</Header>
+</header>
 
-<div class="headText headText--characters">Characters</div>
+<div class="headText headText--characters" id="tit">Characters</div>
 
-<table class="maintable maintable--characters">
+<table class="maintable maintable--characters" id="sec1">
     <tr>
         <th class="maintable__th maintable--characters__th">Characters Name</th>
         <th class="maintable__th maintable--characters__th">Characters Description</th>
@@ -32,89 +59,93 @@
     <tr>
         <td class="maintable__td maintable--characters__td">Sauron</td>
         <td class="maintable__td maintable--characters__td">Sauron, the eponymous Lord of the Rings, was a fallen Maia, the creator of the One Ring, and the most trusted lieutenant of his master Melkor (Morgoth, the first Dark Lord). After Melkor's defeat in the First Age, Sauron became the second Dark Lord and strove to conquer Arda by creating the Rings of Power. In the Second Age, he was defeated in the War of the Last Alliance by the last line of defense: Elves and Men under kings Gil-galad and Elendil.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/sauron.jpg" alt="Sauron"><!--<div class="shadowSauron"></div>--></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/sauron.jpg" alt="Sauron"><!--<div class="shadowSauron"></div>--></td>
     </tr>
     <tr>
         <td class="maintable__td maintable--characters__td">Frodo Baggins</td>
         <td class="maintable__td maintable--characters__td">Frodo Baggins, son of Drogo Baggins, was a Hobbit of the Shire during the Third Age. He was, and still is, Tolkien's most renowned character for his leading role in the Quest of the Ring, in which he bore the One Ring to Mount Doom, where it was destroyed. He was a Ring-bearer, best friend to his gardener, Samwise Gamgee, and one of the three Hobbits who sailed from Middle-earth to the Uttermost West at the end of the Third Age.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/frodoBaggins.png" alt="Frodo Baggins"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/frodoBaggins.png" alt="Frodo Baggins"></td>
     </tr>
     <tr>
         <td class="maintable__td maintable--characters__td">Samwise Gamgee</td>
         <td class="maintable__td maintable--characters__td">Samwise Gamgee, known as Sam, was a Hobbit of the Shire. He was Frodo Baggins' gardener and best friend. Sam proved himself to be Frodo's closest and most dependable companion, the most loyal of the Fellowship of the Ring, and also played a critical role in protecting Frodo and destroying the One Ring.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/samwiseGamgee.jpg" alt="Samwise Gamgee"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/samwiseGamgee.jpg" alt="Samwise Gamgee"></td>
     </tr>
 
     <tr>
         <td class="maintable__td maintable--characters__td">Gandalf the Grey</td>
         <td class="maintable__td maintable--characters__td">Gandalf the Grey, later known as Gandalf the White, and originally named Olórin, was an Istar (wizard), sent by the West in the Third Age to combat the threat of Sauron. He joined Thorin and his company to reclaim the Lonely Mountain from Smaug, convoked the Fellowship of the Ring to destroy the One Ring, and led the Free Peoples in the final campaign of the War of the Ring.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/gandalfTheGrey.jpg" alt="Gandalf the Grey"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/gandalfTheGrey.jpg" alt="Gandalf the Grey"></td>
     </tr>
     <tr>
         <td class="maintable__td maintable--characters__td">Aragorn II Elessar</td>
         <td class="maintable__td maintable--characters__td">Aragorn II, the son of Arathorn II and Gilraen, also known as Elessar and Strider, was the 16th Chieftain of the Dúnedain of the North; later crowned King Elessar Telcontar, the 26th King of Arnor and 35th King of Gondor - and first High King of Gondor and Arnor since the short reign of Isildur. He was a great ranger and warrior, and as Isildur's heir he bore the shards of Narsil, reforged and renamed Andúril, in the War of the Ring.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/aragorn.jpg" alt="Aragorn"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/aragorn.jpg" alt="Aragorn"></td>
     </tr>
     <tr>
         <td class="maintable__td maintable--characters__td">Gollum</td>
         <td class="maintable__td maintable--characters__td">Gollum, originally known as Sméagol (or Trahald), was at first a Stoor, one of the three early Hobbit-types. The name Gollum was derived from the sound of his disgusting gurgling, choking cough. His birth can be estimated to have happened in the year TA 2430. His death date is given as March 25, 3019. His life was extended far beyond its natural limits by the effects of possessing the One Ring. At the time of his death, Sméagol was about 589 years old, a remarkable age for a creature that was once a Hobbit, but he had been deformed and twisted in both body and mind by the corruption of the Ring. His chief desire was to possess the Ring that had enslaved him, and he pursued it for many years after Bilbo Baggins found it while walking in the Misty Mountains in the book The Hobbit. In the movies, he was a deuteragonist-turned-secondary antagonist.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/gollum.png" alt="Gollum"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/gollum.png" alt="Gollum"></td>
     </tr>
     <tr>
         <td class="maintable__td maintable--characters__td">Bilbo Baggins</td>
         <td class="maintable__td maintable--characters__td">Bilbo Baggins was a Hobbit of the Shire, the main protagonist of The Hobbit and a secondary character in The Lord of the Rings. Gandalf suggested Bilbo Baggins to be hired by Thorin and Company to be their burglar in the Quest of Erebor, and later fought in the Battle of the Five Armies. Bilbo was also one of the bearers of the One Ring, and the first to voluntarily give it up, although with some difficulty. He wrote many of his adventures in a book he called There and Back Again. Bilbo adopted Frodo Baggins to be his heir after his parents, Drogo Baggins and Primula Brandybuck, drowned in the Brandywine River.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/bilboBaggins.jpg" alt="Bilbo Baggins"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/bilboBaggins.jpg" alt="Bilbo Baggins"></td>
     </tr>
     <tr>
         <td class="maintable__td maintable--characters__td">Legolas</td>
         <td class="maintable__td maintable--characters__td">Legolas was a Sindarin elf who was part of the Fellowship of the Ring in the Third Age. As he was the son of the Elvenking Thranduil of Mirkwood, Legolas was prince of the Woodland Realm (Mirkwood), a messenger, and a master bowman. With his keen eyesight, sensitive hearing, and excellent bowmanship, Legolas was a valuable resource to the other members of the Fellowship. He was well-known for becoming friends with the dwarf Gimli, despite their long-held differences.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/legolas.png" alt="Legolas"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/legolas.png" alt="Legolas"></td>
     </tr>
 
     <tr>
         <td class="maintable__td maintable--characters__td">Gimli</td>
         <td class="maintable__td maintable--characters__td">Gimli, son of Glóin, was a well-respected dwarf warrior in Middle-earth during the Great Years. He was a member of the Fellowship of the Ring and was the only one of the dwarves to readily fight alongside elves in the war against Sauron at the end of the Third Age. After the defeat of Sauron, he was given lordship of the Glittering Caves at Helm's Deep.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/gimli.png" alt="Gimli"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/gimli.png" alt="Gimli"></td>
     </tr>
     <tr>
         <td class="maintable__td maintable--characters__td">Meriadoc Brandybuck</td>
         <td class="maintable__td maintable--characters__td">Meriadoc "Merry" Brandybuck (later known as Meriadoc "Merry" Brandybuck I, due to his grandson's birth) was a Hobbit and one of Frodo's cousins and closest friends. He loved boats and ponies and had a great interest in the maps of Middle-earth. He was also one of the nine companions of the Fellowship of the Ring, and later became the eighth Master of Buckland.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/merriadocBrandybuck.jpg" alt="Meriadoc Brandybuck"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/merriadocBrandybuck.jpg" alt="Meriadoc Brandybuck"></td>
     </tr>
     <tr>
         <td class="maintable__td maintable--characters__td">Peregrin Took</td>
         <td class="maintable__td maintable--characters__td">Peregrin Took, more commonly known as Pippin, was a Hobbit of the Shire, and one of Frodo Baggins's youngest, but closest friends. He was a member of the Fellowship of the Ring and later became the thirty-second Thain of the Shire.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/peregrinTook.jpg" alt="Peregrin Took"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/peregrinTook.jpg" alt="Peregrin Took"></td>
     </tr>
     <tr>
         <td class="maintable__td maintable--characters__td">Galadriel</td>
         <td class="maintable__td maintable--characters__td">Galadriel was the co-ruler and Lady of Lothlórien alongside her husband, Lord Celeborn - however, neither of them took royal titles, as they only saw themselves as the Guardians of The Golden Wood. She was the only daughter and youngest child of Finarfin, prince of the Ñoldor and of Eärwen, whose cousin was Lúthien. Her elder brothers were Finrod Felagund,  Orodreth, Angrod, and Aegnor.[2] Galadriel was a niece of Fëanor, one of the most important elves of the First Age.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/galadriel.jpg" alt="Galadriel"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/galadriel.jpg" alt="Galadriel"></td>
     </tr>
     <tr>
         <td class="maintable__td maintable--characters__td">Elrond</td>
         <td class="maintable__td maintable--characters__td">Elrond Half-elven, Lord of Rivendell, was one of the mighty Elf-rulers of old who lived in Middle-earth from the First Age to the beginning of the Fourth Age. He was the father of Arwen Undomiel, lover of Aragorn II Elessar.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/elrond.jpg" alt="Elrond"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/elrond.jpg" alt="Elrond"></td>
     </tr>
     <tr>
         <td class="maintable__td maintable--characters__td">Saruman</td>
         <td class="maintable__td maintable--characters__td">Saruman, also known as Saruman the White and Sharkey was an Istar (wizard), who lived in Middle-earth during the Third Age. Originally, he was the chief of the wizards and of the White Council that opposed Sauron. His extensive studies of dark magic, however, eventually led him to desire the One Ring for himself. Thinking he could ally himself with Sauron and then betray him, Saruman allied Isengard with Mordor in the War of the Ring, in which he was defeated.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/saruman.jpg" alt="Saruman"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/saruman.jpg" alt="Saruman"></td>
     </tr>
     <tr>
         <td class="maintable__td maintable--characters__td">Théoden</td>
         <td class="maintable__td maintable--characters__td">Théoden was the seventeenth King of Rohan, and last of the Second Line of the royal House of Eorl.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/theoden.jpg" alt="Théoden"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/theoden.jpg" alt="Théoden"></td>
     </tr>
     <tr>
         <td class="maintable__td maintable--characters__td">Éowyn</td>
         <td class="maintable__td maintable--characters__td">Éowyn was a shieldmaiden of Rohan, daughter of Éomund and Theodwyn, younger sister of Éomer and niece of King Théoden. After the War of the Ring, she married Faramir and had one son with him, Elboron.</td>
-        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="IMG/Characters/eowyn.jpg" alt="Éowyn"></td>
+        <td class="maintable__td maintable--characters__td"><img class="maintable--characters__img" src="img/Characters/eowyn.jpg" alt="Éowyn"></td>
     </tr>
 </table>
-<p class ="characterstext characterstext--star">*These are pictures of the characters from the movies of The Lord of the Rings.</p>
-<div class="characterstext">
-    For a more detailed list of all the characters of Lord of the Rings check <a class="characterstext__a" href="https://lotr.fandom.com/wiki/Category:Characters" target="_blank" title="Full list of the characters in Lord of the Rings">this full characters list</a>.
-</div>
+<footer id="foot">
+    <p class ="characterstext characterstext--star">*These are pictures of the characters from the movies of The Lord of the Rings.</p>
+    <div class="characterstext">
+        For a more detailed list of all the characters of Lord of the Rings check <a class="characterstext__a" href="https://lotr.fandom.com/wiki/Category:Characters" target="_blank" title="Full list of the characters in Lord of the Rings">this full characters list</a>.
+    </div>
+
+</footer>
+
 </body>
 </html>

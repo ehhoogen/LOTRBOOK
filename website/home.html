@@ -1,38 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>LOTR - Home</title>
     <link rel ="stylesheet" type="text/css" href="style.css"/>
-    <link rel="shortcut icon" type="image/x-icon" href="IMG/title_icon.jpg" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/title_icon.jpg" />
 </head>
-<body class="backgr">
-<Header>
-    <div class="container">
 
+<body class="backgr">
+<<<<<<< HEAD:untitled1/home.html
+<header id="head">
+    <script type="text/javascript" src="Jsmenu.js"></script>
+    <div class="container">
+        <div class="drops">
+        <select id="tselect" class="select" >
+            <option id="la">Select text</option>
+            <option value="nav1,tselect,cselect">Header</option>
+            <option value="sec1,sec2,sec3">Sections</option>
+            <option value="art1">Articles</option>
+            <option value="foot">Footer</option>
+        </select>
+        <select id="cselect" onchange="colsel();">
+            <option>Text appearance</option>
+            <option value="Blue">Text Color:Blue</option>
+            <option value="Red">Text Color:Red</option>
+            <option value="Purple">Text Color:Purple</option>
+            <option value="White">Text Color:White</option>
+            <option value=-10>Font Size -10 px</option>
+            <option value=10>Font Size +10 px</option>
+
+        </select>
+        </div>
         <nav>
+            <ul id="nav1">
+                <li ><a href="#">Home</a></li>
+=======
+<Header>
+    <!--<div class="container">-->
+        <nav class="container">
             <ul>
                 <li><a href="#">Home</a></li>
+                <li><a href="pages/info/info.html">Info</a></li>
+>>>>>>> 31ea19dc36a52c67ef0ba2f842c020d26e2aee8b:website/home.html
                 <li><a href="summary.html">Summary</a></li>
                 <li><a href="characters.html">Characters</a></li>
                 <li><a href="author.html">Author</a></li>
                 <li><a href="map.html">Middle-Earth</a></li>
             </ul>
         </nav>
+<<<<<<< HEAD:untitled1/home.html
     </div>
-</Header>
+</header>
 <IMG src="IMG/letters.png" alt="Lotr" class="letters">
+=======
+    <!--</div>-->
+</Header>
 
-<div class="col1">
+<IMG src="img/letters.png" alt="Lotr" class="letters">
+>>>>>>> 31ea19dc36a52c67ef0ba2f842c020d26e2aee8b:website/home.html
+
+<article class="col1" id="art1">
     <p>
         Welcome to this homepage. On this website everything can be found about the Lord of the Rings. Book summaries, author information, movie characters and the Lord of the Rings world "Middle Earth".
     </p>
-</div>
+</article>
 
 <div class="flexcont flexaround">
 
 
-    <div class="col">
+    <section class="col sec" id="sec1" >
         <h2 class="col__h2 col--intro__h2">
             Introduction
         </h2>
@@ -45,8 +82,8 @@
 
 
         </p>
-    </div>
-    <div class="col">
+    </section>
+    <section id="sec2" class="col">
         <h2 class="col__h2 col--films__h2">
             Film Series
         </h2>
@@ -57,8 +94,8 @@
             The series was met with overwhelming praise. It was a major financial success, and is among the highest-grossing film series of all time. Each film was critically acclaimed and heavily awarded, winning 17 out of their 30 Academy Award nominations. The series's final film, The Return of the King, won all 11 of its Academy Award nominations including Best Picture, tying with Ben-Hur (1959) and Titanic (1997) the record for most Academy Awards won by a single film. The series received wide praise for its innovative special and visual effects.
 
         </p>
-    </div>
-    <div class="col">
+    </section>
+    <section class="col" id="sec3">
         <h2 class="col__h2 col--music__h2">
             Music of the series
         </h2>
@@ -69,15 +106,21 @@
             The score became the most successful of Shore's career, earning three Oscars, two Golden Globes, three Grammys, and several other nominations, and some of his themes (like the Shire theme) and songs earning great popularity. The score was voted for best Soundtrack in cinema history. The score was the subject of a short documentary film called Howard Shore: An Introspective, and has even earned a dedicated research-based book by musicologist Doug Adams. The scores go on being performed by choirs and orchestras around the world as symphony pieces, concert suites and live to-projection concerts.
 
         </p>
-    </div>
+    </section>
 
 </div>
-<div class="add">
-    Click img to buy the books
+<<<<<<< HEAD:untitled1/home.html
+<div class="add" id="foot">
+    <h>Click img to buy the books</h>
     <a href="https://www.bol.com/nl/p/the-lord-of-the-rings-boxset/1001004000772651/?suggestionType=typedsearch&bltgh=rA7AxQHgmnLxTOO3WWBDpg.1.6.ProductTitle"  target="_blank"><IMG src="IMG/Books.png" alt="trilogy books" class="book"></a>
 
 
+=======
+<div class="add">
+    Click img to buy the books
+    <a href="https://www.bol.com/nl/p/the-lord-of-the-rings-boxset/1001004000772651/?suggestionType=typedsearch&bltgh=rA7AxQHgmnLxTOO3WWBDpg.1.6.ProductTitle"  target="_blank"><IMG src="img/Books.png" alt="trilogy books" class="book"></a>
+>>>>>>> 31ea19dc36a52c67ef0ba2f842c020d26e2aee8b:website/home.html
 </div>
-
 </body>
+
 </html>
