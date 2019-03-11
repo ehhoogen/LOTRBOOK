@@ -7,28 +7,54 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/title_icon.jpg" />
 </head>
 <body>
-<Header>
+<header id="head">
+    <script type="text/javascript" src="Jsmenu.js"></script>
     <div class="container">
+        <div class="drops">
+        <select id="tselect" >
+            <option>Select text</option>
+            <option value="nav1,tselect,cselect">Header</option>
+            <option value="art">Article</option>
+            <option value="tit">Title</option>
+            <option value="sec1">Sections</option>
+            <option value="foot">Footer</option>
+        </select>
+        <select id="cselect" onchange="colsel();">
+            <option>Text appearance</option>
+            <option value="Blue">Text Color:Blue</option>
+            <option value="Red">Text Color:Red</option>
+            <option value="Purple">Text Color:Purple</option>
+            <option value="White">Text Color:White</option>
+            <option value=-10>Font Size -10 px</option>
+            <option value=10>Font Size +10 px</option>
+
+
+        </select>
+        </div>
         <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
+            <ul id="nav1">
+                <li ><a href="home.html">Home</a></li>
                 <li><a href="pages/info/info.html">Info</a></li>
                 <li><a href="summary.html">Summary</a></li>
                 <li><a href="characters.html">Characters</a></li>
                 <li><a href="author.html">Author</a></li>
-                <li><a href="map.html">Middle-earth</a> </li>
+                <li><a href="map.html">Middle-Earth</a></li>
             </ul>
         </nav>
     </div>
-</Header>
-<div class="maptext1">
+</header>
+
+<div class="maptext1" id="art">
     <a class="maptext1__a" href="map.html#anchor">Click here to return to the map</a>
 </div>
-<div class="headText">
-   Rhûn
+<div class="headText" id="tit">
+    <h>Rhûn</h>
     <img src="img/rhun.jpg" alt="Rhûn" class="map">
 </div>
-<div class="maptext1">
+
+
+<Section class="maptext1" id="sec1">
+    <p>
     Rhûn refers to the little-known lands in eastern Middle-earth.
     Almost nothing of the lands beyond the great Sea of Rhûn is known.
     The first Elves awoke far east of the Sea of Rhûn, and many of them were led to the Westlands by Oromë.
@@ -46,12 +72,15 @@
     After this war, the survivors returned home.
     Late in the Third Age, when war and terror grew in Rhûn itself, considerable numbers of its Dwarves left their ancient homelands.
     They sought refuge in Middle-earth's western lands, where some of them met Frodo Baggins.
-</div>
-<div class="maptext1">
-    <a class="characterstext__a" href="http://tolkiengateway.net/wiki/Rhun" target="_blank" title="More information about Rhûn">Click here for more information about Rhûn</a>
-</div>
-<div class="maptext1">
-    <a class="maptext1__a" href="map.html#anchor">Click here to return to the map</a>
-</div>
+    </p>
+</Section>
+<footer id="foot">
+    <div class="maptext1">
+        <a class="characterstext__a" href="http://tolkiengateway.net/wiki/Rhun" target="_blank" title="More information about Rhûn">Click here for more information about Rhûn</a>
+    </div>
+    <div class="maptext1">
+        <a class="maptext1__a" href="map.html#anchor">Click here to return to the map</a>
+    </div>
+</footer>
 </body>
 </html>
