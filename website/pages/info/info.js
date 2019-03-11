@@ -36,17 +36,17 @@ function insertAllContent() {
     addTextElement("rating3text", "serie3text", ROTK.series);
     addIMGElement("serie3text", "img3", "../../img/slider3.jpg");
     ////////////////////////////////////////////////////////////////////////////////////////////
-    styleElement(document.getElementById("titletext"), "gold", "0%", "0px", "35px", "rgb(0,0,0,0.2)", "66%");
-    styleElement(document.getElementById("authortext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.0)");
-    styleElement(document.getElementById("genretext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.0)");
-    styleElement(document.getElementById("publishertext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.0)");
-    styleElement(document.getElementById("pagestext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.0)");
-    styleElement(document.getElementById("ISBMtext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.0)");
-    styleElement(document.getElementById("ratingtext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.0)");
-    styleElement(document.getElementById("serietext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.0)");
+    styleElement(document.getElementById("titletext"), "gold", "0%", "0px", "35px", "66%");
+    styleElement(document.getElementById("authortext"), "gold", "0%", "40px", "25px", "30px");
+    styleElement(document.getElementById("genretext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("publishertext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("pagestext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("ISBMtext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("ratingtext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("serietext"), "gold", "0%", "40px", "25px");
     /////////////////////////////////////////////////////////////////////////////////////////////////
-    styleElement(document.getElementById("title2text"), "gold", "33%", "0px", "35px", "rgb(0,0,0,0.2)", "33%");
-    styleElement(document.getElementById("author2text"), "gold", "0%", "40px", "25px" );
+    styleElement(document.getElementById("title2text"), "gold", "33%", "0px", "35px",  "33%");
+    styleElement(document.getElementById("author2text"), "gold", "0%", "40px", "25px");
     styleElement(document.getElementById("genre2text"), "gold", "0%", "40px", "25px");
     styleElement(document.getElementById("publisher2text"), "gold", "0%", "40px", "25px");
     styleElement(document.getElementById("pages2text"), "gold", "0%", "40px", "25px");
@@ -54,7 +54,7 @@ function insertAllContent() {
     styleElement(document.getElementById("rating2text"), "gold", "0%", "40px", "25px");
     styleElement(document.getElementById("serie2text"), "gold", "0%", "40px", "25px" );
     ////////////////////////////////////////////////////////////////////////////////////////////////
-    styleElement(document.getElementById("title3text"), "gold", "66%", "0px", "35px", "rgb(0,0,0,0.2)", "0%");
+    styleElement(document.getElementById("title3text"), "gold", "66%", "0px", "35px", "0%");
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "25px");
     styleElement(document.getElementById("genre3text"), "gold", "0%", "40px", "25px");
     styleElement(document.getElementById("publisher3text"), "gold", "0%", "40px", "25px");
@@ -185,12 +185,11 @@ function styleNav(nav){
         nav.childNodes[i].addEventListener("mouseout", function() { nav.childNodes[i].style.color = "black"; });
     }
 }
-function styleElement (element, color, marginleft, margintop, fontsize,rgba, marginright) {
+function styleElement (element, color, marginleft, margintop, fontsize, marginright) {
     element.style.color = color;
     element.style.marginLeft = marginleft;
     element.style.marginTop = margintop;
     element.style.fontSize = fontsize;
-    element.style.backgroundColor = rgba;
     element.style.marginRight = marginright;
 }
 
