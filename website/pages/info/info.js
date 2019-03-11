@@ -67,7 +67,7 @@ function insertAllContent() {
     styleElement(document.getElementById("rating3text"), "gold", "0%", "40px", "25px");
     //////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+*/
 }
 
 /*class Book {
@@ -128,8 +128,6 @@ class Author {
 function addNav () {
     var names = ["Home", "Info", "Summary", "Characters", "Author", "Middle-Earth"];
     var links = ["../../home.html", "#", "../../summary.html", "../../characters.html", "../../author.html", "../../map.html"];
-
-
     for(let i = names.length; i > 0; i--) {
         var newContent = document.createTextNode(names[i-1]);
         var newLink = document.createElement("a");
