@@ -1,4 +1,4 @@
-<<<<<<< HEAD:untitled1/style.css
+
 #tselect,#cselect{
     margin-left:4px;
     Color:White;
@@ -529,7 +529,6 @@ input[name="r"]{
 #r3:checked ~ .s1{
     margin-left:-67%;
 }
-=======
 .container {
     margin-right: 3vw;
 }
@@ -978,4 +977,3 @@ input[name="r"]{
 #r3:checked ~ .s1{
     margin-left:-67%;
 }
->>>>>>> 31ea19dc36a52c67ef0ba2f842c020d26e2aee8b:website/style.css
