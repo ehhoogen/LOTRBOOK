@@ -2,14 +2,17 @@ function insertAllContent() {
     styleBody(document.getElementById("body"));
     addNav();
     styleNav(document.getElementById("nav1"));
-    addTextElement("title", "titletext", "Lord of the Rings: The Fellowship of the Ring"); //de titel node vertakt in 3 verschillende bomen (1 voor elk boek)
+    let theFellowshipOfTheRing = new LordOfTheRings("The Fellowship of the Ring", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
+    let theTwoTowers = new LordOfTheRings("The Two Towers", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
+    let theReturnOfTheKing = new LordOfTheRings("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
+    /*addTextElement("title", "titletext", "Lord of the Rings: The Fellowship of the Ring"); //de titel node vertakt in 3 verschillende bomen (1 voor elk boek)
     addTextElement("titletext", "authortext", "Author: J.R.R. Tolkien");                    // elk boek heeft zelf een lineare boom die steeds van 1 node vertakt naar 1 andere node
     addTextElement("authortext", "genretext", "Genre: Literature & Fiction");
     addTextElement("genretext", "publishertext", "Publisher: The Saul Zaentz Company");
     addTextElement("publishertext", "pagestext", "Number of pages: 432");
     addTextElement("pagestext", "ISBMtext", "ISBM: 978-0547928210");
     addTextElement("ISBMtext", "ratingtext", "Average Amazon rating: 4,7/5");
-    addIMGElement("ratingtext", "img1", "img/slider1.jpg") //probeer er een plaatje in te krijgen
+    addIMGElement("ratingtext", "img1", "../../img/slider1.jpg"); //probeer er een plaatje in te krijgen
     ////////////////////////////////////////////////////////////////////////////////////////
     addTextElement("title", "title2text", "Lord of the Rings: The Two Towers");
     addTextElement("title2text", "author2text", "Author: J.R.R. Tolkien");
@@ -49,9 +52,34 @@ function insertAllContent() {
     styleElement(document.getElementById("publisher3text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)",);
     styleElement(document.getElementById("pages3text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)",);
     styleElement(document.getElementById("ISBM3text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)",);
-    styleElement(document.getElementById("rating3text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)");
+    styleElement(document.getElementById("rating3text"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.2)");*/
     //////////////////////////////////////////////////////////////////////////////////////////////////
 
+}
+
+class Book {
+    constructor(name, author, genre, publisher, pages, ISBN, rating){
+        this.name = name;
+        this.author = author;
+        this.genre = genre;
+        this.publisher = publisher;
+        this.pages = pages;
+        this.ISBN = ISBN;
+        this.rating = rating;
+    }
+}
+
+class LordOfTheRings extends Book{
+    constructor(name, author, genre, publisher, pages, ISBN, rating, series){
+        super(name);
+        super(author);
+        super(genre);
+        super(publisher);
+        super(pages);
+        super(ISBN);
+        super(rating);
+        this.series = series;
+    }
 }
 
 function addNav () {
@@ -84,7 +112,7 @@ function addTextElement (id, newid, text) {
     // create a new div element
     var newDiv = document.createElement("div");
     // give the new div an id
-    newDiv.id = newid
+    newDiv.id = newid;
     // and give it some content
     var newContent = document.createTextNode(text);
     // add the text node to the newly created div
