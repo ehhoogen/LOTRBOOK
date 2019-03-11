@@ -2,19 +2,22 @@ function insertAllContent() {
     styleBody(document.getElementById("body"));
     addNav();
     styleNav(document.getElementById("nav1"));
+    /*let tolkien = new Author("J.R.R. Tolkien","03-01-1892");
+    let theFellowshipOfTheRing = new LordOfTheRings("The Fellowship of the Ring", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
+    let theTwoTowers = new LordOfTheRings("The Two Towers", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
+    let theReturnOfTheKing = new LordOfTheRings("The Return of the King", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
     let FOTR = new Book("The Fellowship of the Ring", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
     let TTT = new Book("The Two Towers", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
-    let ROTK = new Book("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
+    let ROTK = new Book("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");*/
     ///////////////////////////////////////////////////////////////////////////////////
-    addTextElement("title", "titletext", FOTR.name); //de titel node vertakt in 3 verschillende bomen (1 voor elk boek)
-    addTextElement("titletext", "authortext", FOTR.author);                    // elk boek heeft zelf een lineare boom die steeds van 1 node vertakt naar 1 andere node
-    addTextElement("authortext", "genretext", FOTR.genre);
-    addTextElement("genretext", "publishertext", FOTR.publisher);
-    addTextElement("publishertext", "pagestext", FOTR.pages);
-    addTextElement("pagestext", "ISBMtext", FOTR.ISBN);
-    addTextElement("ISBMtext", "ratingtext", FOTR.rating);
-    addTextElement("ratingtext", "serietext", FOTR.series);
-    addIMGElement("serietext", "img1", "../../img/slider1.jpg");
+    /*addTextElement("title", "titletext", "Lord of the Rings: The Fellowship of the Ring"); //de titel node vertakt in 3 verschillende bomen (1 voor elk boek)
+    addTextElement("titletext", "authortext", "Author: J.R.R. Tolkien");                    // elk boek heeft zelf een lineare boom die steeds van 1 node vertakt naar 1 andere node
+    addTextElement("authortext", "genretext", "Genre: Literature & Fiction");
+    addTextElement("genretext", "publishertext", "Publisher: The Saul Zaentz Company");
+    addTextElement("publishertext", "pagestext", "Number of pages: 432");
+    addTextElement("pagestext", "ISBMtext", "ISBM: 978-0547928210");
+    addTextElement("ISBMtext", "ratingtext", "Average Amazon rating: 4,7/5");
+    addIMGElement("ratingtext", "img1", "../../img/slider1.jpg"); //probeer er een plaatje in te krijgen
     ////////////////////////////////////////////////////////////////////////////////////////
     addTextElement("title", "title2text", TTT.name);
     addTextElement("title2text", "author2text", TTT.author);
@@ -36,17 +39,17 @@ function insertAllContent() {
     addTextElement("rating3text", "serie3text", ROTK.series);
     addIMGElement("serie3text", "img3", "../../img/slider3.jpg");
     ////////////////////////////////////////////////////////////////////////////////////////////
-    styleElement(document.getElementById("titletext"), "gold", "0%", "0px", "35px", "rgb(0,0,0,0.2)", "66%");
-    styleElement(document.getElementById("authortext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.0)");
-    styleElement(document.getElementById("genretext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.0)");
-    styleElement(document.getElementById("publishertext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.0)");
-    styleElement(document.getElementById("pagestext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.0)");
-    styleElement(document.getElementById("ISBMtext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.0)");
-    styleElement(document.getElementById("ratingtext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.0)");
-    styleElement(document.getElementById("serietext"), "gold", "0%", "40px", "25px", "rgb(0,0,0,0.0)");
+    styleElement(document.getElementById("titletext"), "gold", "0%", "0px", "35px", "66%");
+    styleElement(document.getElementById("authortext"), "gold", "0%", "40px", "25px", "30px");
+    styleElement(document.getElementById("genretext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("publishertext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("pagestext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("ISBMtext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("ratingtext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("serietext"), "gold", "0%", "40px", "25px");
     /////////////////////////////////////////////////////////////////////////////////////////////////
-    styleElement(document.getElementById("title2text"), "gold", "33%", "0px", "35px", "rgb(0,0,0,0.2)", "33%");
-    styleElement(document.getElementById("author2text"), "gold", "0%", "40px", "25px" );
+    styleElement(document.getElementById("title2text"), "gold", "33%", "0px", "35px",  "33%");
+    styleElement(document.getElementById("author2text"), "gold", "0%", "40px", "25px");
     styleElement(document.getElementById("genre2text"), "gold", "0%", "40px", "25px");
     styleElement(document.getElementById("publisher2text"), "gold", "0%", "40px", "25px");
     styleElement(document.getElementById("pages2text"), "gold", "0%", "40px", "25px");
@@ -54,7 +57,7 @@ function insertAllContent() {
     styleElement(document.getElementById("rating2text"), "gold", "0%", "40px", "25px");
     styleElement(document.getElementById("serie2text"), "gold", "0%", "40px", "25px" );
     ////////////////////////////////////////////////////////////////////////////////////////////////
-    styleElement(document.getElementById("title3text"), "gold", "66%", "0px", "35px", "rgb(0,0,0,0.2)", "0%");
+    styleElement(document.getElementById("title3text"), "gold", "66%", "0px", "35px", "0%");
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "25px");
     styleElement(document.getElementById("genre3text"), "gold", "0%", "40px", "25px");
     styleElement(document.getElementById("publisher3text"), "gold", "0%", "40px", "25px");
@@ -64,7 +67,7 @@ function insertAllContent() {
     styleElement(document.getElementById("rating3text"), "gold", "0%", "40px", "25px");
     //////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+*/
 }
 
 /*class Book {
@@ -111,16 +114,20 @@ class LordOfTheRings extends Book{
         super(pages);
         super(ISBN);
         super(rating);
-        this._series = series;
+        this.series = series;
     }
 }
 
+class Author {
+    constructor(name, birthday){
+        this.name = name;
+        this.birthday = birthday;
+    }
+}
 
 function addNav () {
     var names = ["Home", "Info", "Summary", "Characters", "Author", "Middle-Earth"];
     var links = ["../../home.html", "#", "../../summary.html", "../../characters.html", "../../author.html", "../../map.html"];
-
-
     for(let i = names.length; i > 0; i--) {
         var newContent = document.createTextNode(names[i-1]);
         var newLink = document.createElement("a");
@@ -185,12 +192,10 @@ function styleNav(nav){
         nav.childNodes[i].addEventListener("mouseout", function() { nav.childNodes[i].style.color = "black"; });
     }
 }
-function styleElement (element, color, marginleft, margintop, fontsize,rgba, marginright) {
+function styleElement (element, color, marginleft, margintop, fontsize, marginright) {
     element.style.color = color;
     element.style.marginLeft = marginleft;
     element.style.marginTop = margintop;
     element.style.fontSize = fontsize;
-    element.style.backgroundColor = rgba;
     element.style.marginRight = marginright;
 }
-
