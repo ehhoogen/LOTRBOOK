@@ -77,7 +77,7 @@ function insertAllContent() {
     styleElement(document.getElementById("title3text"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
     /////////////////////////////////////////////////////////////////////////////////////////
-   
+
 }
 
 
