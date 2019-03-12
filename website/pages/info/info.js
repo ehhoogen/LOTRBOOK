@@ -41,19 +41,59 @@ function insertAllContent() {
     addTextElement("rating3text", "serie3text", "Book series: " + ROTK.series);
     addIMGElement("serie3text", "img3", "../../img/slider3.jpg");
     ////////////////////////////////////////////////////////////////////////////////////////////
-    styleElement(document.getElementById("titletext"), "gold", "0%", "150%", "200%");
-    styleElement(document.getElementById("authortext"), "gold", "0%", "40px", "75%");
+    styleElement(document.getElementById("titletext"), "gold", "0%", "0px", "35px", "66%");
+    styleElement(document.getElementById("authortext"), "gold", "0%", "40px", "25px", "30px");
+    styleElement(document.getElementById("genretext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("publishertext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("pagestext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("ISBMtext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("ratingtext"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("serietext"), "gold", "0%", "40px", "25px");
     /////////////////////////////////////////////////////////////////////////////////////////////////
-    styleElement(document.getElementById("title2text"), "gold", "0%", "150%", "200%");
-    styleElement(document.getElementById("author2text"), "gold", "0%", "40px", "75%");
+    styleElement(document.getElementById("title2text"), "gold", "33%", "0px", "35px",  "33%");
+    styleElement(document.getElementById("author2text"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("genre2text"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("publisher2text"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("pages2text"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("ISBM2text"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("rating2text"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("serie2text"), "gold", "0%", "40px", "25px" );
     ////////////////////////////////////////////////////////////////////////////////////////////////
-    styleElement(document.getElementById("title3text"), "gold", "0%", "150%", "200%");
-    styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
+    styleElement(document.getElementById("title3text"), "gold", "66%", "0px", "35px", "0%");
+    styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("genre3text"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("publisher3text"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("pages3text"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("ISBM3text"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("serie3text"), "gold", "0%", "40px", "25px");
+    styleElement(document.getElementById("rating3text"), "gold", "0%", "40px", "25px");
     //////////////////////////////////////////////////////////////////////////////////////////////////
 }
 
+/*class Book {
+
+    constructor(name, author, pages){
+        this.name = name;
+        this.author = author;
+        this.pages = pages;
+    }
+    talk()
+    {
+        window.alert("weyo");
+    }
+}
+
+class LordOfTheRings extends Book{
+    constructor(name, author, pages){
+        super(name);
+        super(author);
+        super(pages);
+    }
+}
+*/
+
 class Book {
-    constructor(name, author, genre, publisher, pages, ISBN, rating){
+    constructor(name, author, genre, publisher, pages, ISBN, rating, series){
         this.name = name;
         this.author = author;
         this.genre = genre;
@@ -61,25 +101,33 @@ class Book {
         this.ISBN = ISBN;
         this.rating = rating;
         this.pages = pages;
+        this.series = series;
     }
 }
 
 class LordOfTheRings extends Book{
     constructor(name, author, genre, publisher, pages, ISBN, rating, series){
-        super(name, author, genre, publisher, pages, ISBN, rating);
+        super(name);
+        super(author);
+        super(genre);
+        super(publisher);
+        super(pages);
+        super(ISBN);
+        super(rating);
         this.series = series;
     }
 }
 
 class Author {
-    constructor(name){
+    constructor(name, birthday){
         this.name = name;
+        this.birthday = birthday;
     }
 }
 
 function addNav () {
     var names = ["Home", "Info", "Summary", "Characters", "Author", "Middle-Earth"];
-    var links = ["../../index.html", "#", "../../summary.html", "../../characters.html", "../../author.html", "../../map.html"];
+    var links = ["../../home.html", "#", "../../summary.html", "../../characters.html", "../../author.html", "../../map.html"];
     for(let i = names.length; i > 0; i--) {
         var newContent = document.createTextNode(names[i-1]);
         var newLink = document.createElement("a");
@@ -104,7 +152,7 @@ function addIMGElement(id, newid, source) {
 
 function addTextElement (id, newid, text) {
     // create a new div element
-    var newDiv = document.createElement("p");
+    var newDiv = document.createElement("div");
     // give the new div an id
     newDiv.id = newid;
     //add some content
@@ -113,6 +161,7 @@ function addTextElement (id, newid, text) {
     newDiv.appendChild(newContent);
     //
     document.getElementById(id).appendChild(newDiv);
+
 }
 
 function styleBody(body){
@@ -132,28 +181,15 @@ function styleNav(nav){
     nav.style.backgroundColor = "rgba(160, 160, 160, 0.5)";
     nav.style.float = "left";
     for(let i = 1; i <= nav.childElementCount; i++){
-        if(i == 1){
-            nav.childNodes[i].style.float = "right";
-            nav.childNodes[i].style.textAlign = "center";
-            nav.childNodes[i].style.fontSize = "16px";
-            nav.childNodes[i].style.margin = "4.7vh 8vw 0 3.15vw";
-            nav.childNodes[i].style.color = "black";
-            nav.childNodes[i].style.textDecoration = "none";
-            nav.childNodes[i].style.textTransform = "uppercase";
-            nav.childNodes[i].addEventListener("mouseover", function() { nav.childNodes[i].style.color = "white"; });
-            nav.childNodes[i].addEventListener("mouseout", function() { nav.childNodes[i].style.color = "black"; });
-        }
-        else{
-            nav.childNodes[i].style.float = "right";
-            nav.childNodes[i].style.textAlign = "center";
-            nav.childNodes[i].style.fontSize = "16px";
-            nav.childNodes[i].style.margin = "4.7vh 3vw 0 3.4vw";
-            nav.childNodes[i].style.color = "black";
-            nav.childNodes[i].style.textDecoration = "none";
-            nav.childNodes[i].style.textTransform = "uppercase";
-            nav.childNodes[i].addEventListener("mouseover", function() { nav.childNodes[i].style.color = "white"; });
-            nav.childNodes[i].addEventListener("mouseout", function() { nav.childNodes[i].style.color = "black"; });
-        }
+        nav.childNodes[i].style.float = "right";
+        nav.childNodes[i].style.textAlign = "center";
+        nav.childNodes[i].style.fontSize = "16px";
+        nav.childNodes[i].style.margin = "4.7vh 2.97vw 0 3.15vw";
+        nav.childNodes[i].style.color = "black";
+        nav.childNodes[i].style.textDecoration = "none";
+        nav.childNodes[i].style.textTransform = "uppercase";
+        nav.childNodes[i].addEventListener("mouseover", function() { nav.childNodes[i].style.color = "white"; });
+        nav.childNodes[i].addEventListener("mouseout", function() { nav.childNodes[i].style.color = "black"; });
     }
 }
 function styleElement (element, color, marginleft, margintop, fontsize, marginright) {
