@@ -7,12 +7,9 @@ function insertAllContent() {
     styleSection(document.getElementById("section3"), "25vw", "40px");
     styleDiv(document.getElementById("mainDiv"));
     let tolkien = new Author("J.R.R. Tolkien");
-    let theFellowshipOfTheRing = new LordOfTheRings("The Fellowship of the Ring", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
-    let theTwoTowers = new LordOfTheRings("The Two Towers", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
-    let theReturnOfTheKing = new LordOfTheRings("The Return of the King", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
-    let FOTR = new Book("The Fellowship of the Ring", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5");
-    let TTT = new Book("The Two Towers", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5");
-    let ROTK = new Book("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5");
+    let FOTR = new LordOfTheRings("The Fellowship of the Ring", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
+    let TTT = new LordOfTheRings("The Two Towers", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
+    let ROTK = new LordOfTheRings("The Return of the King", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
     ///////////////////////////////////////////////////////////////////////////////////
     addTextElement("title", "titletext", "Name: " + FOTR.name); //de titel node vertakt in 3 verschillende bomen (1 voor elk boek)
     addTextElement("titletext", "authortext", "Author: " + FOTR.author);                    // elk boek heeft zelf een lineare boom die steeds van 1 node vertakt naar 1 andere node
@@ -21,8 +18,8 @@ function insertAllContent() {
     addTextElement("publishertext", "pagestext", "Number of pages: " + FOTR.pages);
     addTextElement("pagestext", "ISBNtext", "ISBN: " + FOTR.ISBN);
     addTextElement("ISBNtext", "ratingtext", "Average amazon rating: " + FOTR.rating);
-    //addTextElement("ratingtext", "serietext", FOTR.series);
-    addIMGElement("ratingtext", "img1", "../../img/slider1.jpg"); //probeer er een plaatje in te krijgen
+    addTextElement("ratingtext", "serietext", "Book series: " + FOTR.series);
+    addIMGElement("serietext", "img1", "../../img/slider1.jpg"); //probeer er een plaatje in te krijgen
     ////////////////////////////////////////////////////////////////////////////////////////
     addTextElement("title2", "title2text", "Name: " + TTT.name);
     addTextElement("title2text", "author2text", "Author: " + TTT.author);
@@ -31,8 +28,8 @@ function insertAllContent() {
     addTextElement("publisher2text", "pages2text", "Number of pages: " + TTT.pages);
     addTextElement("pages2text", "ISBN2text", "ISBN: " + TTT.ISBN);
     addTextElement("ISBN2text", "rating2text", "Average amazon rating: " + TTT.rating);
-    //addTextElement("rating2text", "serie2text", TTT.series);
-    addIMGElement("rating2text", "img2", "../../img/slider2.jpg");
+    addTextElement("rating2text", "serie2text", "Book series: " + TTT.series);
+    addIMGElement("serie2text", "img2", "../../img/slider2.jpg");
     /////////////////////////////////////////////////////////////////////////////////////
     addTextElement("title3", "title3text", "Name: " + ROTK.name);
     addTextElement("title3text", "author3text", "Author: " + ROTK.author);
@@ -41,8 +38,8 @@ function insertAllContent() {
     addTextElement("publisher3text", "pages3text", "Number of pages: " + ROTK.pages);
     addTextElement("pages3text", "ISBN3text", "ISBN: " + ROTK.ISBN);
     addTextElement("ISBN3text", "rating3text", "Average amazon rating: " + ROTK.rating);
-    //addTextElement("rating3text", "serie3text", ROTK.series);
-    addIMGElement("rating3text", "img3", "../../img/slider3.jpg");
+    addTextElement("rating3text", "serie3text", "Book series: " + ROTK.series);
+    addIMGElement("serie3text", "img3", "../../img/slider3.jpg");
     ////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("titletext"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("authortext"), "gold", "0%", "40px", "75%");
@@ -53,7 +50,6 @@ function insertAllContent() {
     styleElement(document.getElementById("title3text"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
     //////////////////////////////////////////////////////////////////////////////////////////////////
-
 }
 
 class Book {
@@ -111,7 +107,7 @@ function addTextElement (id, newid, text) {
     var newDiv = document.createElement("p");
     // give the new div an id
     newDiv.id = newid;
-    // and give it some content
+    //add some content
     var newContent = document.createTextNode(text);
     // add the text node to the newly created div
     newDiv.appendChild(newContent);
@@ -135,7 +131,6 @@ function styleNav(nav){
     nav.style.height = "7.1vh";
     nav.style.backgroundColor = "rgba(160, 160, 160, 0.5)";
     nav.style.float = "left";
-    nav.style.marginTop = "0";
     for(let i = 1; i <= nav.childElementCount; i++){
         if(i == 1){
             nav.childNodes[i].style.float = "right";
@@ -170,7 +165,7 @@ function styleElement (element, color, marginleft, margintop, fontsize, marginri
 }
 
 function styleDiv (element){
-    element.style.position = "absolute";
+    //element.style.position = "absolute";
     element.style.display = "flex";
     element.style.justifyContent = "space-around";
 }
