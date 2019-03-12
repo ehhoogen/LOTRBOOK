@@ -6,13 +6,15 @@ function insertAllContent() {
     styleSection(document.getElementById("section2"), "25vw", "40px");
     styleSection(document.getElementById("section3"), "25vw", "40px");
     styleDiv(document.getElementById("mainDiv"));
-    let tolkien = new Author("J.R.R. Tolkien");
-    let theFellowshipOfTheRing = new LordOfTheRings("The Fellowship of the Ring", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
-    let theTwoTowers = new LordOfTheRings("The Two Towers", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
-    let theReturnOfTheKing = new LordOfTheRings("The Return of the King", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
-    let FOTR = new Book("The Fellowship of the Ring", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5");
-    let TTT = new Book("The Two Towers", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5");
-    let ROTK = new Book("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5");
+  //  let tolkien = new Author("J.R.R. Tolkien");
+  //  let theFellowshipOfTheRing = new LordOfTheRings("The Fellowship of the Ring", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
+   // let theTwoTowers = new LordOfTheRings("The Two Towers", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
+   // let theReturnOfTheKing = new LordOfTheRings("The Return of the King", tolkien.name, "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
+    let FOTR = new Book("The Fellowship of the Ring", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
+    let TTT = new Book("The Two Towers", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
+    let ROTK = new Book("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
+    let Publish = new Publisher("George Allen & Unwin", "1871", "British", "George Allen & Sons", "1917", "Australian", "Lord of the Rings");
+    let Tolkien = new Author("J.R.R. Tolkien", "South-Africa", "England", "Died in 1972 at the age of 81", "The hobbit");
     ///////////////////////////////////////////////////////////////////////////////////
     addTextElement("title", "titletext", "Name: " + FOTR.name); //de titel node vertakt in 3 verschillende bomen (1 voor elk boek)
     addTextElement("titletext", "authortext", "Author: " + FOTR.author);                    // elk boek heeft zelf een lineare boom die steeds van 1 node vertakt naar 1 andere node
@@ -21,9 +23,16 @@ function insertAllContent() {
     addTextElement("publishertext", "pagestext", "Number of pages: " + FOTR.pages);
     addTextElement("pagestext", "ISBNtext", "ISBN: " + FOTR.ISBN);
     addTextElement("ISBNtext", "ratingtext", "Average amazon rating: " + FOTR.rating);
-    //addTextElement("ratingtext", "serietext", FOTR.series);
+    addTextElement("ratingtext", "serietext", FOTR.series);
     addIMGElement("ratingtext", "img1", "../../img/slider1.jpg"); //probeer er een plaatje in te krijgen
     ////////////////////////////////////////////////////////////////////////////////////////
+    addTextElement("img1", "astart", "Author:");
+    addTextElement("astart", "a0", Tolkien.name);
+    addTextElement("a0", "a1", "Born in " + Tolkien.bornnationality);
+    addTextElement("a1","a2", "Lived in " + Tolkien.truenationality);
+    addTextElement("a2", "a3", Tolkien.age);
+    addTextElement("a3", "a4", "Most important work: " + Tolkien.mostimportantwork);
+    ///////////////////////////////////////////////////////////////////////////////////////
     addTextElement("title2", "title2text", "Name: " + TTT.name);
     addTextElement("title2text", "author2text", "Author: " + TTT.author);
     addTextElement("author2text", "genre2text", "Genre: " + TTT.genre);
@@ -31,33 +40,49 @@ function insertAllContent() {
     addTextElement("publisher2text", "pages2text", "Number of pages: " + TTT.pages);
     addTextElement("pages2text", "ISBN2text", "ISBN: " + TTT.ISBN);
     addTextElement("ISBN2text", "rating2text", "Average amazon rating: " + TTT.rating);
-    //addTextElement("rating2text", "serie2text", TTT.series);
+    addTextElement("rating2text", "serie2text", TTT.series);
     addIMGElement("rating2text", "img2", "../../img/slider2.jpg");
+    ///////////////////////////////////////////////////////////////////////////////////////
+    addTextElement("img2", "pstart", "Publisher:");
+    addTextElement("pstart", "p0", Publish.name);
+    addTextElement("p0", "p1", "Founded in: " + Publish.age);
+    addTextElement("p1","p2", "Founded as: " + Publish.foundedname);
+    addTextElement("p2", "p3", "Original nationality: " + Publish.foundednationality);
+    addTextElement("p3", "p4", "Bought up in: " + Publish.merged);
+    addTextElement("p4", "p5", "New nationality: " + Publish.newnationality);
+    addTextElement("p5", "p6", "Most important work: " + Publish.mostimportantwork);
     /////////////////////////////////////////////////////////////////////////////////////
     addTextElement("title3", "title3text", "Name: " + ROTK.name);
     addTextElement("title3text", "author3text", "Author: " + ROTK.author);
     addTextElement("author3text", "genre3text", "Genre: " + ROTK.genre);
-    addTextElement("genre3text", "publisher3text", "Publisher: " + ROTK.publisher);
+    addTextElement("genre3text", "publisher3text", "Publisher: " + Publish.name);//+ ROTK.publisher);
     addTextElement("publisher3text", "pages3text", "Number of pages: " + ROTK.pages);
     addTextElement("pages3text", "ISBN3text", "ISBN: " + ROTK.ISBN);
     addTextElement("ISBN3text", "rating3text", "Average amazon rating: " + ROTK.rating);
-    //addTextElement("rating3text", "serie3text", ROTK.series);
+    addTextElement("rating3text", "serie3text", ROTK.series);
     addIMGElement("rating3text", "img3", "../../img/slider3.jpg");
     ////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("titletext"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("authortext"), "gold", "0%", "40px", "75%");
     /////////////////////////////////////////////////////////////////////////////////////////////////
+    styleElement(document.getElementById("astart"), "gold", "0%", "20%", "200%");
+    styleElement(document.getElementById("a0"), "gold", "0%", "0%", "50%");
+    ////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("title2text"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("author2text"), "gold", "0%", "40px", "75%");
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    styleElement(document.getElementById("pstart"), "gold", "0%", "32%", "200%");
+    styleElement(document.getElementById("p0"), "gold", "0%", "0%", "50%");
     ////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("title3text"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
     //////////////////////////////////////////////////////////////////////////////////////////////////
 
+    document.getElementById("pstart").addEventListener("hover", );
 }
 
 class Book {
-    constructor(name, author, genre, publisher, pages, ISBN, rating){
+    constructor(name, author, genre, publisher, pages, ISBN, rating, series){
         this.name = name;
         this.author = author;
         this.genre = genre;
@@ -65,6 +90,7 @@ class Book {
         this.ISBN = ISBN;
         this.rating = rating;
         this.pages = pages;
+        this.series = series;
     }
 }
 
@@ -76,8 +102,27 @@ class LordOfTheRings extends Book{
 }
 
 class Author {
-    constructor(name){
+    constructor(name, bornnat, truenat, age, miw){
         this.name = name;
+        this.bornnationality = bornnat
+        this.truenationality = truenat;
+        this.age = age;
+        this.mostimportantwork = miw;
+        this.link = "https://en.wikipedia.org/wiki/J._R._R._Tolkien"
+    }
+}
+
+class Publisher {
+    constructor(name, age, fnat, fname, merged, newnat, miw){
+        this.name = name;
+        this.age = age;
+        this.foundednationality = fnat;
+        this.foundedname = fname;
+        this.merged = merged;
+        this.newnationality = newnat;
+        this.mostimportantwork = miw;
+        this.link = "https://en.wikipedia.org/wiki/Allen_%26_Unwin";
+
     }
 }
 
