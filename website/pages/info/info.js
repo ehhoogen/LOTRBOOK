@@ -198,6 +198,7 @@ function styleNav(nav){
     nav.style.backgroundColor = "rgba(160, 160, 160, 0.5)";
     nav.style.float = "left";
     nav.style.marginTop = "0";
+    nav.style.zIndex = "100";
     for(let i = 1; i <= nav.childElementCount; i++){
         if(i == 1){
             nav.childNodes[i].style.float = "right";
@@ -235,6 +236,7 @@ function styleDiv (element){
     element.style.position = "absolute";
     element.style.display = "flex";
     element.style.justifyContent = "space-around";
+    element.style.zIndex = "-100";
 }
 
 function styleSection (section, width, padding) {
