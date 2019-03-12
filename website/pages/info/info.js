@@ -38,7 +38,7 @@ function insertAllContent() {
     addTextElement("pages2text", "ISBN2text", "ISBN: " + TTT.ISBN);
     addTextElement("ISBN2text", "rating2text", "Average amazon rating: " + TTT.rating);
     addTextElement("rating2text", "serie2text", "Book series: " + TTT.series);
-    addIMGElement("rating2text", "img2", "../../img/slider2.jpg","Cover of the second book of the series: The Two Towers");
+    addIMGElement("rating2text", "img2", "../../img/lotr2.jpg","Cover of the second book of the series: The Two Towers");
     ///////////////////////////////////////////////////////////////////////////////////////
     addTextElement("img2", "pstart", "Publisher:");
     addTextElement("pstart", "p0", "");
@@ -58,7 +58,7 @@ function insertAllContent() {
     addTextElement("pages3text", "ISBN3text", "ISBN: " + ROTK.ISBN);
     addTextElement("ISBN3text", "rating3text", "Average amazon rating: " + ROTK.rating);
     addTextElement("rating3text", "serie3text", "Book series: " + ROTK.series);
-    addIMGElement("rating3text", "img3", "../../img/slider3.jpg", "Cover of the third and final book of the series: The Return of the King");
+    addIMGElement("rating3text", "img3", "../../img/lotr3.jpg", "Cover of the third and final book of the series: The Return of the King");
     ////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("titletext"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("authortext"), "gold", "0%", "40px", "75%");
@@ -70,13 +70,14 @@ function insertAllContent() {
     styleElement(document.getElementById("title2text"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("author2text"), "gold", "0%", "40px", "75%");
     ////////////////////////////////////////////////////////////////////////////////////////////////
-    styleElement(document.getElementById("pstart"), "gold", "0%", "32%", "200%");
+    styleElement(document.getElementById("pstart"), "gold", "0%", "14%", "200%");
     styleElement(document.getElementById("p0"), "gold", "0%", "0%", "50%");
     styleElement(document.getElementById("p01"), "gold");
     ////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("title3text"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
     /////////////////////////////////////////////////////////////////////////////////////////
+
 }
 
 
