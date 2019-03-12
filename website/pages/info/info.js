@@ -14,7 +14,7 @@ function insertAllContent() {
     let TTT = new Book("The Two Towers", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
     let ROTK = new Book("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
     let Publish = new Publisher("George Allen & Unwin", "1871", "British", "George Allen & Sons", "1917", "Australian", "Lord of the Rings");
-    let Tolkien = new Author("J.R.R. Tolkien", "South-Africa", "England", "Died in 1972 at the age of 81", "The hobbit");
+    let Tolkien = new Author("J.R.R. Tolkien", "South-Africa", "England", "Died in 1972 at the age of 81", "The Hobbit");
     ///////////////////////////////////////////////////////////////////////////////////
     addTextElement("title", "titletext", "Name: " + FOTR.name); //de titel node vertakt in 3 verschillende bomen (1 voor elk boek)
     addTextElement("titletext", "authortext", "Author: " + FOTR.author);                    // elk boek heeft zelf een lineare boom die steeds van 1 node vertakt naar 1 andere node
@@ -32,6 +32,8 @@ function insertAllContent() {
     addTextElement("a1","a2", "Lived in " + Tolkien.truenationality);
     addTextElement("a2", "a3", Tolkien.age);
     addTextElement("a3", "a4", "Most important work: " + Tolkien.mostimportantwork);
+    addTextElement("a4", "a5", "More info ");
+    addLinkElement("a5", "a6", "here", "https://en.wikipedia.org/wiki/J._R._R._Tolkien");
     ///////////////////////////////////////////////////////////////////////////////////////
     addTextElement("title2", "title2text", "Name: " + TTT.name);
     addTextElement("title2text", "author2text", "Author: " + TTT.author);
@@ -42,6 +44,7 @@ function insertAllContent() {
     addTextElement("ISBN2text", "rating2text", "Average amazon rating: " + TTT.rating);
     addTextElement("rating2text", "serie2text", TTT.series);
     addIMGElement("rating2text", "img2", "../../img/slider2.jpg");
+
     ///////////////////////////////////////////////////////////////////////////////////////
     addTextElement("img2", "pstart", "Publisher:");
     addTextElement("pstart", "p0", Publish.name);
@@ -51,6 +54,8 @@ function insertAllContent() {
     addTextElement("p3", "p4", "Bought up in: " + Publish.merged);
     addTextElement("p4", "p5", "New nationality: " + Publish.newnationality);
     addTextElement("p5", "p6", "Most important work: " + Publish.mostimportantwork);
+    addTextElement("p6", "p7", "More info ");
+    addLinkElement("p7", "p8", "here", "https://en.wikipedia.org/wiki/Allen_%26_Unwin");
     /////////////////////////////////////////////////////////////////////////////////////
     addTextElement("title3", "title3text", "Name: " + ROTK.name);
     addTextElement("title3text", "author3text", "Author: " + ROTK.author);
@@ -78,7 +83,7 @@ function insertAllContent() {
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
     //////////////////////////////////////////////////////////////////////////////////////////////////
 
-    document.getElementById("pstart").addEventListener("hover", );
+    document.getElementById("p8").addEventListener("click", function(){ window.alert});
 }
 
 class Book {
@@ -153,15 +158,28 @@ function addIMGElement(id, newid, source) {
 
 function addTextElement (id, newid, text) {
     // create a new div element
-    var newDiv = document.createElement("p");
+    var newDiv1 = document.createElement("p");
     // give the new div an id
-    newDiv.id = newid;
+    newDiv1.id = newid;
     // and give it some content
     var newContent = document.createTextNode(text);
     // add the text node to the newly created div
-    newDiv.appendChild(newContent);
+    newDiv1.appendChild(newContent);
     //
+    document.getElementById(id).appendChild(newDiv1);
+}
+
+function addLinkElement (id, newid, text, link) {
+    var newDiv = document.createElement('a');
+    newDiv.id = newid;
+    newDiv.href = link;
+    newDiv.title = text;
+    newDiv.target = "_blank";
+    var newContent = document.createTextNode(text);
+    newDiv.appendChild(newContent);
     document.getElementById(id).appendChild(newDiv);
+
+
 }
 
 function styleBody(body){
