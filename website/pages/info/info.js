@@ -24,16 +24,15 @@ function insertAllContent() {
     addTextElement("pagestext", "ISBNtext", "ISBN: " + FOTR.ISBN);
     addTextElement("ISBNtext", "ratingtext", "Average amazon rating: " + FOTR.rating);
     addTextElement("ratingtext", "serietext", FOTR.series);
-    addIMGElement("ratingtext", "img1", "../../img/slider1.jpg"); //probeer er een plaatje in te krijgen
+    addIMGElement("ratingtext", "img1", "../../img/slider1.jpg", "Cover of the first book of the series: the Fellowship of Ring"); //probeer er een plaatje in te krijgen
     ////////////////////////////////////////////////////////////////////////////////////////
     addTextElement("img1", "astart", "Author:");
-    addTextElement("astart", "a0", Tolkien.name);
+    addTextElement("astart", "a0", "");
+    addLinkElement("a0", "a01", Tolkien.name,"https://en.wikipedia.org/wiki/J._R._R._Tolkien");
     addTextElement("a0", "a1", "Born in " + Tolkien.bornnationality);
     addTextElement("a1","a2", "Lived in " + Tolkien.truenationality);
     addTextElement("a2", "a3", Tolkien.age);
     addTextElement("a3", "a4", "Most important work: " + Tolkien.mostimportantwork);
-    addTextElement("a4", "a5", "More info ");
-    addLinkElement("a5", "a6", "here", "https://en.wikipedia.org/wiki/J._R._R._Tolkien");
     ///////////////////////////////////////////////////////////////////////////////////////
     addTextElement("title2", "title2text", "Name: " + TTT.name);
     addTextElement("title2text", "author2text", "Author: " + TTT.author);
@@ -43,19 +42,17 @@ function insertAllContent() {
     addTextElement("pages2text", "ISBN2text", "ISBN: " + TTT.ISBN);
     addTextElement("ISBN2text", "rating2text", "Average amazon rating: " + TTT.rating);
     addTextElement("rating2text", "serie2text", TTT.series);
-    addIMGElement("rating2text", "img2", "../../img/slider2.jpg");
-
+    addIMGElement("rating2text", "img2", "../../img/slider2.jpg", "Cover of the second book of the series: the Two Towers");
     ///////////////////////////////////////////////////////////////////////////////////////
     addTextElement("img2", "pstart", "Publisher:");
-    addTextElement("pstart", "p0", Publish.name);
+    addTextElement("pstart", "p0", "");
+    addLinkElement("p0", "p01", Publish.name,"https://en.wikipedia.org/wiki/Allen_%26_Unwin");
     addTextElement("p0", "p1", "Founded in: " + Publish.age);
     addTextElement("p1","p2", "Founded as: " + Publish.foundedname);
     addTextElement("p2", "p3", "Original nationality: " + Publish.foundednationality);
     addTextElement("p3", "p4", "Bought up in: " + Publish.merged);
     addTextElement("p4", "p5", "New nationality: " + Publish.newnationality);
     addTextElement("p5", "p6", "Most important work: " + Publish.mostimportantwork);
-    addTextElement("p6", "p7", "More info ");
-    addLinkElement("p7", "p8", "here", "https://en.wikipedia.org/wiki/Allen_%26_Unwin");
     /////////////////////////////////////////////////////////////////////////////////////
     addTextElement("title3", "title3text", "Name: " + ROTK.name);
     addTextElement("title3text", "author3text", "Author: " + ROTK.author);
@@ -65,19 +62,21 @@ function insertAllContent() {
     addTextElement("pages3text", "ISBN3text", "ISBN: " + ROTK.ISBN);
     addTextElement("ISBN3text", "rating3text", "Average amazon rating: " + ROTK.rating);
     addTextElement("rating3text", "serie3text", ROTK.series);
-    addIMGElement("rating3text", "img3", "../../img/slider3.jpg");
+    addIMGElement("rating3text", "img3", "../../img/slider3.jpg", "Cover of the third and final book of the series: the Return of the King");
     ////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("titletext"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("authortext"), "gold", "0%", "40px", "75%");
     /////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("astart"), "gold", "0%", "20%", "200%");
     styleElement(document.getElementById("a0"), "gold", "0%", "0%", "50%");
+    styleElement(document.getElementById("a01"), "gold");
     ////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("title2text"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("author2text"), "gold", "0%", "40px", "75%");
     ////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("pstart"), "gold", "0%", "32%", "200%");
     styleElement(document.getElementById("p0"), "gold", "0%", "0%", "50%");
+    styleElement(document.getElementById("p01"), "gold");
     ////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("title3text"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
@@ -109,7 +108,7 @@ class LordOfTheRings extends Book{
 class Author {
     constructor(name, bornnat, truenat, age, miw){
         this.name = name;
-        this.bornnationality = bornnat
+        this.bornnationality = bornnat;
         this.truenationality = truenat;
         this.age = age;
         this.mostimportantwork = miw;
@@ -143,7 +142,7 @@ function addNav () {
     }
 }
 
-function addIMGElement(id, newid, source) {
+function addIMGElement(id, newid, source, alt) {
     var newDiv = document.createElement("div");
     newDiv.id = newid;
     var newContent = document.createElement("img");
@@ -151,7 +150,7 @@ function addIMGElement(id, newid, source) {
     newContent.setAttribute("height", "100%");
     newContent.setAttribute("width", "70%");
     newContent.setAttribute("marginLeft", "20%");
-    newContent.setAttribute("alt", "this image is not loaded correctly")
+    newContent.setAttribute("alt", alt);
     newDiv.appendChild(newContent);
     document.getElementById(id).appendChild(newDiv);
 }
