@@ -6,9 +6,9 @@ function insertAllContent() {
     styleSection(document.getElementById("section2"), "25vw", "40px");
     styleSection(document.getElementById("section3"), "25vw", "40px");
     styleDiv(document.getElementById("mainDiv"));
-    let FOTR = new Book("The Fellowship of the Ring", "J.R.R. Tolkien", "Literature & Fiction", "George Allen & Unwin", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
-    let TTT = new Book("The Two Towers", "J.R.R. Tolkien", "Literature & Fiction", "George Allen & Unwin", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
-    let ROTK = new Book("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "George Allen & Unwin", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
+    let FOTR = new LordOfTheRings("The Fellowship of the Ring", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
+    let TTT = new LordOfTheRings("The Two Towers", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
+    let ROTK = new LordOfTheRings("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
     let Publish = new Publisher("George Allen & Unwin", "1871", "British", "George Allen & Sons", "1917", "Australian", "Lord of the Rings");
     let Tolkien = new Author("J.R.R. Tolkien", "South-Africa", "England", "Died in 1972 at the age of 81", "The Hobbit");
 ///////////////////////////////////////////////////////////////////////////////////
@@ -19,7 +19,7 @@ function insertAllContent() {
     addTextElement("publishertext", "pagestext", "Number of pages: " + FOTR.pages);
     addTextElement("pagestext", "ISBNtext", "ISBN: " + FOTR.ISBN);
     addTextElement("ISBNtext", "ratingtext", "Average amazon rating: " + FOTR.rating);
-    addTextElement("ratingtext", "serietext", FOTR.series);
+    addTextElement("ratingtext", "serietext", "Book series: " + FOTR.series);
     addIMGElement("serietext", "img1", "../../img/lotr1.jpg", "Cover of the first book of the series: the Fellowship of Ring"); //probeer er een plaatje in te krijgen
     ////////////////////////////////////////////////////////////////////////////////////////
     addTextElement("serietext", "astart", "Author:");
@@ -37,7 +37,7 @@ function insertAllContent() {
     addTextElement("publisher2text", "pages2text", "Number of pages: " + TTT.pages);
     addTextElement("pages2text", "ISBN2text", "ISBN: " + TTT.ISBN);
     addTextElement("ISBN2text", "rating2text", "Average amazon rating: " + TTT.rating);
-    addTextElement("rating2text", "serie2text", TTT.series);
+    addTextElement("rating2text", "serie2text", "Book series: " + TTT.series);
     addIMGElement("rating2text", "img2", "../../img/lotr2.jpg","Cover of the second book of the series: The Two Towers");
     ///////////////////////////////////////////////////////////////////////////////////////
     addTextElement("img2", "pstart", "Publisher:");
@@ -57,7 +57,7 @@ function insertAllContent() {
     addTextElement("publisher3text", "pages3text", "Number of pages: " + ROTK.pages);
     addTextElement("pages3text", "ISBN3text", "ISBN: " + ROTK.ISBN);
     addTextElement("ISBN3text", "rating3text", "Average amazon rating: " + ROTK.rating);
-    addTextElement("rating3text", "serie3text", ROTK.series);
+    addTextElement("rating3text", "serie3text", "Book series: " + ROTK.series);
     addIMGElement("rating3text", "img3", "../../img/lotr3.jpg", "Cover of the third and final book of the series: The Return of the King");
     ////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("titletext"), "gold", "0%", "150%", "200%");
@@ -90,7 +90,6 @@ class Book {
         this.ISBN = ISBN;
         this.rating = rating;
         this.pages = pages;
-        this.series = series;
     }
 }
 
