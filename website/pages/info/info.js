@@ -6,9 +6,9 @@ function insertAllContent() {
     styleSection(document.getElementById("section2"), "25vw", "40px");
     styleSection(document.getElementById("section3"), "25vw", "40px");
     styleDiv(document.getElementById("mainDiv"));
-    let FOTR = new Book("The Fellowship of the Ring", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
-    let TTT = new Book("The Two Towers", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
-    let ROTK = new Book("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
+    let FOTR = new Book("The Fellowship of the Ring", "J.R.R. Tolkien", "Literature & Fiction", "George Allen & Unwin", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
+    let TTT = new Book("The Two Towers", "J.R.R. Tolkien", "Literature & Fiction", "George Allen & Unwin", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
+    let ROTK = new Book("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "George Allen & Unwin", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
     let Publish = new Publisher("George Allen & Unwin", "1871", "British", "George Allen & Sons", "1917", "Australian", "Lord of the Rings");
     let Tolkien = new Author("J.R.R. Tolkien", "South-Africa", "England", "Died in 1972 at the age of 81", "The Hobbit");
 ///////////////////////////////////////////////////////////////////////////////////
@@ -38,7 +38,7 @@ function insertAllContent() {
     addTextElement("pages2text", "ISBN2text", "ISBN: " + TTT.ISBN);
     addTextElement("ISBN2text", "rating2text", "Average amazon rating: " + TTT.rating);
     addTextElement("rating2text", "serie2text", TTT.series);
-    addIMGElement("rating2text", "img2", "../../img/slider2.jpg","Cover of the second book of the series: The Two Towers");
+    addIMGElement("rating2text", "img2", "../../img/lotr2.jpg","Cover of the second book of the series: The Two Towers");
     ///////////////////////////////////////////////////////////////////////////////////////
     addTextElement("img2", "pstart", "Publisher:");
     addTextElement("pstart", "p0", "");
@@ -58,7 +58,7 @@ function insertAllContent() {
     addTextElement("pages3text", "ISBN3text", "ISBN: " + ROTK.ISBN);
     addTextElement("ISBN3text", "rating3text", "Average amazon rating: " + ROTK.rating);
     addTextElement("rating3text", "serie3text", ROTK.series);
-    addIMGElement("rating3text", "img3", "../../img/slider3.jpg", "Cover of the third and final book of the series: The Return of the King");
+    addIMGElement("rating3text", "img3", "../../img/lotr3.jpg", "Cover of the third and final book of the series: The Return of the King");
     ////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("titletext"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("authortext"), "gold", "0%", "40px", "75%");
@@ -70,13 +70,14 @@ function insertAllContent() {
     styleElement(document.getElementById("title2text"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("author2text"), "gold", "0%", "40px", "75%");
     ////////////////////////////////////////////////////////////////////////////////////////////////
-    styleElement(document.getElementById("pstart"), "gold", "0%", "32%", "200%");
+    styleElement(document.getElementById("pstart"), "gold", "0%", "14%", "200%");
     styleElement(document.getElementById("p0"), "gold", "0%", "0%", "50%");
     styleElement(document.getElementById("p01"), "gold");
     ////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("title3text"), "gold", "0%", "150%", "200%");
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
     /////////////////////////////////////////////////////////////////////////////////////////
+   
 }
 
 
