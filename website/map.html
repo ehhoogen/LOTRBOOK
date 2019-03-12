@@ -7,25 +7,49 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/title_icon.jpg" />
 </head>
 <body>
-<header>
+<header id="head">
+    <script type="text/javascript" src="Jsmenu.js"></script>
     <div class="container">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
+        <div class="drops">
+            <select id="tselect" class="select" >
+                <option id="la">Select text</option>
+                <option value="body">Page</option>
+                <option value="nav1,tselect,cselect">Header</option>
+                <option value="tit">Title</option>
+                <option value="art">Articles</option>
+            </select>
+            <select id="cselect" onchange="colsel();">
+                <option>Text appearance</option>
+                <option value="Blue">Text Color:Blue</option>
+                <option value="Red">Text Color:Red</option>
+                <option value="Purple">Text Color:Purple</option>
+                <option value="White">Text Color:White</option>
+                <option value=-10>Font Size -10 px</option>
+                <option value=10>Font Size +10 px</option>
+
+            </select>
+        </div>
+
+        <nav >
+            <ul id="nav1">
+                <li><a href="home.html">Home</a></li>
                 <li><a href="pages/info/info.html">Info</a></li>
                 <li><a href="summary.html">Summary</a></li>
                 <li><a href="characters.html">Characters</a></li>
                 <li><a href="author.html">Author</a></li>
-                <li><a href="#">Middle-earth</a> </li>
+                <li><a href="map.html">Middle-Earth</a></li>
             </ul>
         </nav>
     </div>
+
 </header>
 
 <div class="headText">
-    The map of Middle-Earth
-    <div class="authortext">
-        Click on one of the highlighted areas below to find out more about this area of Middle-Earth.
+    <section id="tit">
+    <h>The map of Middle-Earth</h>
+    </section>
+    <div class="authortext" id="art">
+        <h>Click on one of the highlighted areas below to find out more about this area of Middle-Earth.</h>
     </div>
 </div>
 
