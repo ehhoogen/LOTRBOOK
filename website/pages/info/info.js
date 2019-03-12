@@ -6,6 +6,8 @@ function insertAllContent() {
     styleSection(document.getElementById("section2"), "25vw", "40px");
     styleSection(document.getElementById("section3"), "25vw", "40px");
     styleDiv(document.getElementById("mainDiv"));
+    addTextElement("pageTitle", "information", "Information");
+    styleTitle(document.getElementById("pageTitle"));
     let FOTR = new LordOfTheRings("The Fellowship of the Ring", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
     let TTT = new LordOfTheRings("The Two Towers", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
     let ROTK = new LordOfTheRings("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
@@ -60,21 +62,21 @@ function insertAllContent() {
     addTextElement("rating3text", "serie3text", "Book series: " + ROTK.series);
     addIMGElement("rating3text", "img3", "../../img/lotr3.jpg", "Cover of the third and final book of the series: The Return of the King");
     ////////////////////////////////////////////////////////////////////////////////////////////
-    styleElement(document.getElementById("titletext"), "gold", "0%", "150%", "200%");
+    styleElement(document.getElementById("titletext"), "gold", "0%", "70%", "200%");
     styleElement(document.getElementById("authortext"), "gold", "0%", "40px", "75%");
     /////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("astart"), "gold", "0%", "20%", "200%");
     styleElement(document.getElementById("a0"), "gold", "0%", "0%", "50%");
     styleElement(document.getElementById("a01"), "gold");
     ////////////////////////////////////////////////////////////////////////////////////////////////
-    styleElement(document.getElementById("title2text"), "gold", "0%", "150%", "200%");
+    styleElement(document.getElementById("title2text"), "gold", "0%", "70%", "200%");
     styleElement(document.getElementById("author2text"), "gold", "0%", "40px", "75%");
     ////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("pstart"), "gold", "0%", "14%", "200%");
     styleElement(document.getElementById("p0"), "gold", "0%", "0%", "50%");
     styleElement(document.getElementById("p01"), "gold");
     ////////////////////////////////////////////////////////////////////////////////////////////////
-    styleElement(document.getElementById("title3text"), "gold", "0%", "150%", "200%");
+    styleElement(document.getElementById("title3text"), "gold", "0%", "70%", "200%");
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
     /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -192,18 +194,31 @@ function styleNav(nav){
     nav.style.height = "7.1vh";
     nav.style.backgroundColor = "rgba(160, 160, 160, 0.5)";
     nav.style.float = "left";
-    nav.style.marginTop = "0";
+    nav.style.marginTop = "-13.5%";
     nav.style.zIndex = "100";
     for(let i = 1; i <= nav.childElementCount; i++){
-        nav.childNodes[i].style.float = "right";
-        nav.childNodes[i].style.textAlign = "center";
-        nav.childNodes[i].style.fontSize = "16px";
-        nav.childNodes[i].style.margin = "4.7vh 2.97vw 0 3.15vw";
-        nav.childNodes[i].style.color = "black";
-        nav.childNodes[i].style.textDecoration = "none";
-        nav.childNodes[i].style.textTransform = "uppercase";
-        nav.childNodes[i].addEventListener("mouseover", function() { nav.childNodes[i].style.color = "white"; });
-        nav.childNodes[i].addEventListener("mouseout", function() { nav.childNodes[i].style.color = "black"; });
+        if(i == 1){
+            nav.childNodes[i].style.float = "right";
+            nav.childNodes[i].style.textAlign = "center";
+            nav.childNodes[i].style.fontSize = "16px";
+            nav.childNodes[i].style.margin = "4.7vh 8vw 0 3.15vw";
+            nav.childNodes[i].style.color = "black";
+            nav.childNodes[i].style.textDecoration = "none";
+            nav.childNodes[i].style.textTransform = "uppercase";
+            nav.childNodes[i].addEventListener("mouseover", function() { nav.childNodes[i].style.color = "white"; });
+            nav.childNodes[i].addEventListener("mouseout", function() { nav.childNodes[i].style.color = "black"; });
+        }
+        else{
+            nav.childNodes[i].style.float = "right";
+            nav.childNodes[i].style.textAlign = "center";
+            nav.childNodes[i].style.fontSize = "16px";
+            nav.childNodes[i].style.margin = "4.7vh 3vw 0 3.4vw";
+            nav.childNodes[i].style.color = "black";
+            nav.childNodes[i].style.textDecoration = "none";
+            nav.childNodes[i].style.textTransform = "uppercase";
+            nav.childNodes[i].addEventListener("mouseover", function() { nav.childNodes[i].style.color = "white"; });
+            nav.childNodes[i].addEventListener("mouseout", function() { nav.childNodes[i].style.color = "black"; });
+        }
     }
 }
 function styleElement (element, color, marginleft, margintop, fontsize, width, height) {
@@ -219,6 +234,14 @@ function styleDiv (element){
     element.style.display = "flex";
     element.style.justifyContent = "space-around";
     element.style.zIndex = "-100";
+}
+
+function styleTitle (title){
+    title.style.color = "gold";
+    title.style.marginLeft = "38%";
+    title.style.marginTop = "14%";
+    title.style.fontSize = "70px";
+    title.style.textShadow = "0.016em 0 black, 0 0.016em black, -0.016em 0 black, 0 -0.016em black";
 }
 
 function styleSection (section, width, padding) {
