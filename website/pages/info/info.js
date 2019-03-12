@@ -12,6 +12,7 @@ function insertAllContent() {
     let Publish = new Publisher("George Allen & Unwin", "1871", "British", "George Allen & Sons", "1917", "Australian", "Lord of the Rings");
     let Tolkien = new Author("J.R.R. Tolkien", "South-Africa", "England", "Died in 1972 at the age of 81", "The Hobbit");
 ///////////////////////////////////////////////////////////////////////////////////
+
     addTextElement("title", "titletext", "Name: " + FOTR.name); //de titel node vertakt in 3 verschillende bomen (1 voor elk boek)
     addTextElement("titletext", "authortext", "Author: " + FOTR.author);                    // elk boek heeft zelf een lineare boom die steeds van 1 node vertakt naar 1 andere node
     addTextElement("authortext", "genretext", "Genre: " + FOTR.genre);
