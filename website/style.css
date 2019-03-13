@@ -164,7 +164,7 @@ nav ul{
 }
 nav li{
     display: inline-block;
-    margin: 4.7vh 0vw/*97*/ 0 3.15vw;
+    margin: 4.7vh 0vw/*97*/ 0vw 2vw;
 }
 nav a{
     color: black;
