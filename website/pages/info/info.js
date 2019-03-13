@@ -251,11 +251,11 @@ function styleNav(nav){
     nav.style.marginTop = "-2.6%";
     nav.style.zIndex = "100";
     for(let i = 0; i < nav.childElementCount; i++){
-        if(i === 1){
+        if(i === 0){
             nav.childNodes[i].style.float = "right";
             nav.childNodes[i].style.textAlign = "center";
             nav.childNodes[i].style.fontSize = "16px";
-            nav.childNodes[i].style.margin = "4.7vh 8vw 0 3.15vw";
+            nav.childNodes[i].style.margin = "4.7vh 4.9vw 0 3.4vw";
             nav.childNodes[i].style.color = "black";
             nav.childNodes[i].style.textDecoration = "none";
             nav.childNodes[i].style.textTransform = "uppercase";
@@ -266,7 +266,7 @@ function styleNav(nav){
             nav.childNodes[i].style.float = "right";
             nav.childNodes[i].style.textAlign = "center";
             nav.childNodes[i].style.fontSize = "16px";
-            nav.childNodes[i].style.margin = "4.7vh 3vw 0 3.4vw";
+            nav.childNodes[i].style.margin = "4.7vh 0 0 3.4vw";
             nav.childNodes[i].style.color = "black";
             nav.childNodes[i].style.textDecoration = "none";
             nav.childNodes[i].style.textTransform = "uppercase";
