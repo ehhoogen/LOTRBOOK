@@ -12,6 +12,14 @@ function insertAllContent() {
     document.getElementById("p01").addEventListener("click", warning);
     document.getElementById("a01").addEventListener("click", warning);
     document.getElementById("save").addEventListener("click", colsel);
+    document.getElementById("p01").addEventListener("click", warning);
+    document.getElementById("p01").addEventListener("mouseover", hoverp);
+    document.getElementById("p01").addEventListener("mouseout", hoverp1);
+    document.getElementById("p01").addEventListener("click", link1);
+    document.getElementById("a01").addEventListener("click", warning);
+    document.getElementById("a01").addEventListener("click", link2);
+    document.getElementById("a01").addEventListener("mouseover", hovera);
+    document.getElementById("a01").addEventListener("mouseout", hovera1);
 }
 
 //This function creates all the elements(like <header>, <div>, etc.) needed on the info page
@@ -33,13 +41,6 @@ function addAllElements(){
 //This function adds all the text/images/links to the created elements
 function addAllTextElements(FOTR, TTT, ROTK, Tolkien, Publish) {
     addTextElement("pageTitle", "information", "Information");
-    styleTitle(document.getElementById("pageTitle"));
-    /////////////////////////////////////////////////////////////////////////////////
-   // let Publish = new Publisher("George Allen & Unwin", "1871", "British", "George Allen & Sons", "1917", "Australian", "Lord of the Rings");
-   // let Tolkien = new Author("J.R.R. Tolkien", "South-Africa", "England", "Died in 1972 at the age of 81", "The Hobbit");
-   // let FOTR = new LordOfTheRings("The Fellowship of the Ring", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928210", "4,7/5", "Lord of the Rings");
-   // let TTT = new LordOfTheRings("The Two Towers", Tolkien.name, "Literature & Fiction", Publish.name, "352", "978-0547928203", "4,9/5", "Lord of the Rings");
-   // let ROTK = new LordOfTheRings("The Return of the King", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928197", "4,8/5", "Lord of the Rings");
     ///////////////////////////////////////////////////////////////////////////////////
     addTextElement("title", "titletext", "Name: " + FOTR.name);
     addTextElement("titletext", "authortext", "Author: " + FOTR.author);
@@ -116,16 +117,6 @@ function stylePage(){
     styleElement(document.getElementById("title3text"), "gold", "0%", "70%", "200%");
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
     /////////////////////////////////////////////////////////////////////////////////////////
-
-
-    document.getElementById("p01").addEventListener("click", warning);
-    document.getElementById("p01").addEventListener("mouseover", hoverp);
-    document.getElementById("p01").addEventListener("mouseout", hoverp1);
-    document.getElementById("p01").addEventListener("click", link1);
-    document.getElementById("a01").addEventListener("click", warning);
-    document.getElementById("a01").addEventListener("click", link2);
-    document.getElementById("a01").addEventListener("mouseover", hovera);
-    document.getElementById("a01").addEventListener("mouseout", hovera1);
 }
 
 function hoverp1() {document.getElementById("p01").style.color = "gold";}
@@ -382,12 +373,12 @@ function colsel() {
     var a = document.getElementById("tselect").value;
     var appear = document.getElementById('cselect').value;
     var numb = parseInt(appear);
-    console.log(a);
+    // The selected id's will be put into a list. var a is a string with id's and spaces in between them
     var list = a.split(',');
     console.log(a);
     for (var j = 0; j < list.length; j++) {
 
-        if (a === "body") {
+        if (a === "body") {//Here every element of the page gets selected and changed with the selected change
             var all = document.getElementsByTagName("*");
         } else {
             var all = document.getElementById(list[j]).querySelectorAll("*");
@@ -397,7 +388,7 @@ function colsel() {
             all[i].style.color = appear;
         }
 
-        for (let i = 0; i < all.length; i++) {
+        for (let i = 0; i < all.length; i++) {//Here the selected part of the page, in the dropdown menu, changed with the selected change
             var stylo = window.getComputedStyle(all[i], null).getPropertyValue('font-size');
             var currentSize = parseInt(stylo);
             all[i].style.fontSize = (currentSize + (numb / 10)) + 'px';
