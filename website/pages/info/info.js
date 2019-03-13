@@ -227,6 +227,12 @@ function addStyleMenu(element){
         }
         select2.appendChild(option2);
     }
+    var button = document.createElement('button');
+    button.className = "button";
+    button.id = "save";
+    var text = document.createTextNode("Save");
+    button.appendChild(text);
+    newFirstElement.appendChild(button);
 }
 
 function addElement(element, id, tagName){
@@ -309,12 +315,9 @@ function styleSection (section, width, padding) {
 function styleStyleMenu (element){
     element.style.marginTop = "1.85%";
     element.style.marginLeft = "5%";
-    var select1 = element.firstChild;
-    var select2 = element.lastChild;
-    select1.style.color = "white";
-    select1.style.backgroundColor = "black";
-    select1.style.marginLeft = "4px";
-    select2.style.color = "white";
-    select2.style.backgroundColor = "black";
-    select2.style.marginLeft = "8px";
+    for(let i = 0; i < element.childElementCount; i++){
+        element.childNodes[i].style.color = "white";
+        element.childNodes[i].style.backgroundColor = "black";
+        element.childNodes[i].style.marginLeft = "4px";
+    }
 }
