@@ -93,11 +93,14 @@ function insertAllContent() {
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
     /////////////////////////////////////////////////////////////////////////////////////////
 
-    document.getElementById("p01").addEventListener("click", alert);
+    document.getElementById("p01").addEventListener("click", warning);
+    document.getElementById("a01").addEventListener("click", warning);
 
 
 }
-
+function warning() {
+    window.alert("You are about to click an external link")
+}
 
 class Book {
     constructor(name, author, genre, publisher, pages, ISBN, rating, series){

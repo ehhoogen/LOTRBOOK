@@ -476,8 +476,8 @@ table, th, td {
 .button {
     color: white;
     background-color: black;
-    width: 5vw;
-    height: 1.6vw;
+    width: 44px;
+    height: 18px;
     border: 1px solid lightgray;
 
 }
