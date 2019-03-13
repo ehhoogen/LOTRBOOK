@@ -1,6 +1,6 @@
 
 #tselect,#cselect{
-    margin-left:4px;
+    margin-left:0px;
     Color:White;
     background-color:black;
 
@@ -8,7 +8,8 @@
 }
 .drops{
     position:absolute;
-    margin-top:20px;
+    margin-top:4vh;
+    margin-left:0vw;
 }
 /*lalalalala*/
 .container {
@@ -163,7 +164,7 @@ nav ul{
 }
 nav li{
     display: inline-block;
-    margin: 4.7vh 2.97vw 0 3.15vw;
+    margin: 4.7vh 0vw/*97*/ 0 3.15vw;
 }
 nav a{
     color: black;
@@ -470,8 +471,14 @@ table, th, td {
     margin-bottom: 50px;
     font-size: 28px;
     padding-right:20px
+}
 
-
+.button {
+    color: white;
+    background-color: black;
+    width: 5vw;
+    height: 1.6vw;
+    border: 1px solid lightgray;
 
 }
 
