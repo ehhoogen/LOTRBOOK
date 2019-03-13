@@ -318,9 +318,15 @@ function styleSection (section, width, padding) {
 function styleStyleMenu (element){
     element.style.marginTop = "1.85%";
     element.style.marginLeft = "5%";
-    for(let i = 0; i < element.childElementCount; i++){
+    for(let i = 0; i < element.childElementCount - 1; i++){
         element.childNodes[i].style.color = "white";
         element.childNodes[i].style.backgroundColor = "black";
         element.childNodes[i].style.marginLeft = "4px";
     }
+    element.lastChild.style.color = "white";
+    element.lastChild.style.backgroundColor = "black";
+    element.lastChild.style.width = "44px";
+    element.lastChild.style.height = "18px";
+    element.lastChild.style.border = "1px solid lightgray";
+    element.lastChild.style.marginLeft = "4px";
 }
