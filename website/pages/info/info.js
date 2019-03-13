@@ -95,7 +95,7 @@ function insertAllContent() {
 
     document.getElementById("p01").addEventListener("click", warning);
     document.getElementById("a01").addEventListener("click", warning);
-
+    document.getElementById("save").addEventListener("click", warning);
 
 }
 function warning() {

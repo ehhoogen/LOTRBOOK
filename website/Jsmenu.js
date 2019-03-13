@@ -3,10 +3,11 @@ if(save){
     save.addEventListener("click", colsel);
 }
 */
-document.getElementById("save").addEventListener("click", colsel);
+function onload() {
+    document.getElementById("save").addEventListener("click", colsel);
+}
 
-function colsel()
-{
+function colsel() {
     var a = document.getElementById("tselect").value;
     var appear = document.getElementById('cselect').value;
     var numb = parseInt(appear);
@@ -15,10 +16,9 @@ function colsel()
     console.log(a);
     for (var j = 0; j < list.length; j++) {
 
-        if(a==="body"){
+        if (a === "body") {
             var all = document.getElementsByTagName("*");
-        }
-        else{
+        } else {
             var all = document.getElementById(list[j]).querySelectorAll("*");
         }
 
@@ -29,7 +29,7 @@ function colsel()
         for (let i = 0; i < all.length; i++) {
             var stylo = window.getComputedStyle(all[i], null).getPropertyValue('font-size');
             var currentSize = parseInt(stylo);
-            all[i].style.fontSize = (currentSize+(numb/10)) + 'px';
+            all[i].style.fontSize = (currentSize + (numb / 10)) + 'px';
         }
     }
 }
