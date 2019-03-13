@@ -6,7 +6,7 @@
     <link rel ="stylesheet" type="text/css" href="style.css"/>
     <link rel="shortcut icon" type="image/x-icon" href="img/title_icon.jpg" />
 </head>
-<body>
+<body onload="onload()">
 <header id="head">
     <script type="text/javascript" src="Jsmenu.js"></script>
     <div class="container">
@@ -20,7 +20,7 @@
             <option value="Childhood,Early life,Later life,Books written,Legacy">Sections</option>
             <option value="art,art1,art2,art3">Article</option>
         </select>
-        <select id="cselect" onchange="colsel();">
+        <select id="cselect">
             <option>Text appearance</option>
             <option value="Blue">Text Color:Blue</option>
             <option value="Red">Text Color:Red</option>
@@ -31,10 +31,13 @@
 
 
         </select>
+            <button class ="button" id="save">
+                Save
+            </button>
         </div>
         <nav>
             <ul id="nav1">
-                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="pages/info/info.html">Info</a></li>
                 <li><a href="summary.html">Summary</a></li>
                 <li><a href="characters.html">Characters</a></li>
@@ -72,7 +75,7 @@
 
 <div class="headText">
     <section id="Tolkien">
-        <h>John Ronald Reuel Tolkien</h>
+        <h4>John Ronald Reuel Tolkien</h4>
     </section>
     <div class="authortext">
         <img src="img/lotrBoeken.jpg" alt="The Lord of the Rings trilogy" class="Tolkien">

@@ -6,7 +6,7 @@
     <link rel ="stylesheet" type="text/css" href="style.css"/>
     <link rel="shortcut icon" type="image/x-icon" href="img/title_icon.jpg" />
 </head>
-<body>
+<body onload="onload()">
 <header id="head">
     <script type="text/javascript" src="Jsmenu.js"></script>
     <div class="container">
@@ -18,7 +18,7 @@
             <option value="tit">Title</option>
             <option value="sec1">Sections</option>
         </select>
-        <select id="cselect" onchange="colsel();">
+        <select id="cselect">
             <option>Text appearance</option>
             <option value="Blue">Text Color:Blue</option>
             <option value="Red">Text Color:Red</option>
@@ -26,13 +26,15 @@
             <option value="White">Text Color:White</option>
             <option value=-10>Font Size -10 px</option>
             <option value=10>Font Size +10 px</option>
-
-
         </select>
+
+        <button class ="button" id="save">
+            Save
+        </button>
         </div>
-        <nav>
+            <nav>
             <ul id="nav1">
-                <li ><a href="home.html">Home</a></li>
+                <li ><a href="index.html">Home</a></li>
                 <li><a href="pages/info/info.html">Info</a></li>
                 <li><a href="#">Summary</a></li>
                 <li><a href="characters.html">Characters</a></li>
@@ -43,10 +45,10 @@
     </div>
 </header>
 
-<div class="summary">
-    <h1 class="headText headText--summary" id="tit">
-        A summary of the Lord of the Rings trilogy
-    </h1>
+<div class="summary headText headText--summary">
+    <section id="tit">
+        <h4>A summary of the Lord of the Rings trilogy</h4>
+    </section>
     <div class="boxje">
 
         <div class="slidershow middle">

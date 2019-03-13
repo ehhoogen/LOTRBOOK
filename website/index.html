@@ -8,7 +8,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/title_icon.jpg" />
 </head>
 
-<body class="backgr">
+<body class="backgr" onload="onload()">
 <header id="head">
     <script type="text/javascript" src="Jsmenu.js"></script>
     <div class="container">
@@ -21,7 +21,7 @@
             <option value="art1">Articles</option>
             <option value="foot">Footer</option>
         </select>
-        <select id="cselect" onchange="colsel();">
+        <select id="cselect">
             <option>Text appearance</option>
             <option value="Blue">Text Color:Blue</option>
             <option value="Red">Text Color:Red</option>
@@ -29,11 +29,13 @@
             <option value="White">Text Color:White</option>
             <option value=-10>Font Size -10 px</option>
             <option value=10>Font Size +10 px</option>
-
         </select>
+            <button class="button" id="save">
+                Save
+            </button>
         </div>
 
-        <nav >
+        <nav>
             <ul id="nav1">
                 <li><a href="#">Home</a></li>
                 <li><a href="pages/info/info.html">Info</a></li>
