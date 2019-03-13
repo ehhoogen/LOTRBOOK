@@ -27,8 +27,8 @@ function insertAllContent() {
     let TTT = new LordOfTheRings("The Two Towers", Tolkien.name, "Literature & Fiction", Publish.name, "352", "978-0547928203", "4,9/5", "Lord of the Rings");
     let ROTK = new LordOfTheRings("The Return of the King", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928197", "4,8/5", "Lord of the Rings");
     ///////////////////////////////////////////////////////////////////////////////////
-    addTextElement("title", "titletext", "Name: " + FOTR.name); //de titel node vertakt in 3 verschillende bomen (1 voor elk boek)
-    addTextElement("titletext", "authortext", "Author: " + FOTR.author);                    // elk boek heeft zelf een lineare boom die steeds van 1 node vertakt naar 1 andere node
+    addTextElement("title", "titletext", "Name: " + FOTR.name);
+    addTextElement("titletext", "authortext", "Author: " + FOTR.author);
     addTextElement("authortext", "genretext", "Genre: " + FOTR.genre);
     addTextElement("genretext", "publishertext", "Publisher: " + FOTR.publisher);
     addTextElement("publishertext", "pagestext", "Number of pages: " + FOTR.pages);
@@ -39,7 +39,7 @@ function insertAllContent() {
     ////////////////////////////////////////////////////////////////////////////////////////
     addTextElement("serietext", "astart", "Author:");
     addTextElement("astart", "a0", "");
-    addLinkElement("a0", "a01", Tolkien.name,"https://en.wikipedia.org/wiki/J._R._R._Tolkien");
+    addLinkElement("a0", "a01", Tolkien.name,"https://en.wikipedia.org/wiki/J._R._R._Tolkien"); 
     addTextElement("a0", "a1", "Born in " + Tolkien.bornnationality);
     addTextElement("a1","a2", "Lived in " + Tolkien.truenationality);
     addTextElement("a2", "a3", Tolkien.age);
@@ -57,7 +57,7 @@ function insertAllContent() {
     ///////////////////////////////////////////////////////////////////////////////////////
     addTextElement("img2", "pstart", "Publisher:");
     addTextElement("pstart", "p0", "");
-    addLinkElement("p0", "p01", Publish.name,"https://en.wikipedia.org/wiki/Allen_%26_Unwin");
+    addLinkElement("p0", "p01", Publish.name);
     addTextElement("p0", "p1", "Founded in: " + Publish.age);
     addTextElement("p1","p2", "Founded as: " + Publish.foundedname);
     addTextElement("p2", "p3", "Original nationality: " + Publish.foundednationality);
@@ -93,14 +93,24 @@ function insertAllContent() {
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
     /////////////////////////////////////////////////////////////////////////////////////////
 
-    document.getElementById("p01").addEventListener("click", warning);
-    document.getElementById("a01").addEventListener("click", warning);
-    document.getElementById("save").addEventListener("click", warning);
 
+    document.getElementById("p01").addEventListener("click", warning);
+    document.getElementById("p01").addEventListener("mouseover", hoverp);
+    document.getElementById("p01").addEventListener("mouseout", hoverp1);
+    document.getElementById("p01").addEventListener("click", link1);
+    document.getElementById("a01").addEventListener("click", warning);
+    document.getElementById("a01").addEventListener("click", link2);
+    document.getElementById("a01").addEventListener("mouseover", hovera);
+    document.getElementById("a01").addEventListener("mouseout", hovera1);
 }
-function warning() {
-    window.alert("You are about to click an external link")
-}
+
+function hoverp1() {document.getElementById("p01").style.color = "gold";}
+function hoverp() {document.getElementById("p01").style.color = "white";}
+function hovera1() {document.getElementById("a01").style.color = "gold";}
+function hovera() {document.getElementById("a01").style.color = "white";}
+function link1() {window.location="https://en.wikipedia.org/wiki/Allen_%26_Unwin";}
+function link2() {window.location="https://en.wikipedia.org/wiki/J._R._R._Tolkien";}
+function warning() {window.alert("You are about to click an external link meaning you will leave this site.")}
 
 class Book {
     constructor(name, author, genre, publisher, pages, ISBN, rating, series){
@@ -189,12 +199,11 @@ function addTextElement (id, newid, text) {
 
 }
 
-function addLinkElement (id, newid, text, link) {
+function addLinkElement (id, newid, text) {
     var newDiv = document.createElement('a');
     newDiv.id = newid;
-    newDiv.href = link;
     newDiv.title = text;
-    newDiv.target = "_blank";
+    newDiv.style.textDecoration = "underline";
     var newContent = document.createTextNode(text);
     newDiv.appendChild(newContent);
     document.getElementById(id).appendChild(newDiv);
