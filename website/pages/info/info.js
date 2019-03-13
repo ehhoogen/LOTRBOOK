@@ -35,11 +35,11 @@ function addAllTextElements(FOTR, TTT, ROTK, Tolkien, Publish) {
     addTextElement("pageTitle", "information", "Information");
     styleTitle(document.getElementById("pageTitle"));
     /////////////////////////////////////////////////////////////////////////////////
-    let Publish = new Publisher("George Allen & Unwin", "1871", "British", "George Allen & Sons", "1917", "Australian", "Lord of the Rings");
-    let Tolkien = new Author("J.R.R. Tolkien", "South-Africa", "England", "Died in 1972 at the age of 81", "The Hobbit");
-    let FOTR = new LordOfTheRings("The Fellowship of the Ring", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928210", "4,7/5", "Lord of the Rings");
-    let TTT = new LordOfTheRings("The Two Towers", Tolkien.name, "Literature & Fiction", Publish.name, "352", "978-0547928203", "4,9/5", "Lord of the Rings");
-    let ROTK = new LordOfTheRings("The Return of the King", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928197", "4,8/5", "Lord of the Rings");
+   // let Publish = new Publisher("George Allen & Unwin", "1871", "British", "George Allen & Sons", "1917", "Australian", "Lord of the Rings");
+   // let Tolkien = new Author("J.R.R. Tolkien", "South-Africa", "England", "Died in 1972 at the age of 81", "The Hobbit");
+   // let FOTR = new LordOfTheRings("The Fellowship of the Ring", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928210", "4,7/5", "Lord of the Rings");
+   // let TTT = new LordOfTheRings("The Two Towers", Tolkien.name, "Literature & Fiction", Publish.name, "352", "978-0547928203", "4,9/5", "Lord of the Rings");
+   // let ROTK = new LordOfTheRings("The Return of the King", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928197", "4,8/5", "Lord of the Rings");
     ///////////////////////////////////////////////////////////////////////////////////
     addTextElement("title", "titletext", "Name: " + FOTR.name);
     addTextElement("titletext", "authortext", "Author: " + FOTR.author);
