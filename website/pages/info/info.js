@@ -1,9 +1,24 @@
 function insertAllContent() {
-    styleBody(document.getElementById("body"));
+    let Publish = new Publisher("George Allen & Unwin", "1871", "British", "George Allen & Sons", "1917", "Australian", "Lord of the Rings");
+    let Tolkien = new Author("J.R.R. Tolkien", "South-Africa", "England", "Died in 1972 at the age of 81", "The Hobbit");
+    let FOTR = new LordOfTheRings("The Fellowship of the Ring", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928210", "4,7/5", "Lord of the Rings");
+    let TTT = new LordOfTheRings("The Two Towers", Tolkien.name, "Literature & Fiction", Publish.name, "352", "978-0547928203", "4,9/5", "Lord of the Rings");
+    let ROTK = new LordOfTheRings("The Return of the King", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928197", "4,8/5", "Lord of the Rings");
+
+    addAllElements();
+    addAllTextElements(FOTR, TTT, ROTK, Tolkien, Publish);
+    stylePage();
+
+    document.getElementById("p01").addEventListener("click", warning);
+    document.getElementById("a01").addEventListener("click", warning);
+    document.getElementById("save").addEventListener("click", colsel);
+}
+
+//This function creates all the elements(like <header>, <div>, etc.) needed on the info page
+function addAllElements(){
     addElement(document.getElementById("body"), "header", 'header');
     addElement(document.getElementById("header"), "container", 'div');
     addNav(document.getElementById("container"));
-    styleNav(document.getElementById("nav1"));
     addElement(document.getElementById("body"), "pageTitle", 'div');
     addElement(document.getElementById("body"), "mainDiv", 'div');
     addElement(document.getElementById("mainDiv"), "section", 'section');
@@ -13,30 +28,22 @@ function insertAllContent() {
     addElement(document.getElementById("section2"), "title2", 'div');
     addElement(document.getElementById("section3"), "title3", 'div');
     addStyleMenu(document.getElementById("container"));
-    styleStyleMenu(document.getElementById("drops"));
-    styleSection(document.getElementById("section"), "25vw", "40px");
-    styleSection(document.getElementById("section2"), "25vw", "40px");
-    styleSection(document.getElementById("section3"), "25vw", "40px");
-    styleDiv(document.getElementById("mainDiv"));
+}
+
+//This function adds all the text/images/links to the created elements
+function addAllTextElements(FOTR, TTT, ROTK, Tolkien, Publish) {
     addTextElement("pageTitle", "information", "Information");
-    styleTitle(document.getElementById("pageTitle"));
-    /////////////////////////////////////////////////////////////////////////////////
-    let Publish = new Publisher("George Allen & Unwin", "1871", "British", "George Allen & Sons", "1917", "Australian", "Lord of the Rings");
-    let Tolkien = new Author("J.R.R. Tolkien", "South-Africa", "England", "Died in 1972 at the age of 81", "The Hobbit");
-    let FOTR = new LordOfTheRings("The Fellowship of the Ring", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928210", "4,7/5", "Lord of the Rings");
-    let TTT = new LordOfTheRings("The Two Towers", Tolkien.name, "Literature & Fiction", Publish.name, "352", "978-0547928203", "4,9/5", "Lord of the Rings");
-    let ROTK = new LordOfTheRings("The Return of the King", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928197", "4,8/5", "Lord of the Rings");
-    ///////////////////////////////////////////////////////////////////////////////////
-    addTextElement("title", "titletext", "Name: " + FOTR.name); //de titel node vertakt in 3 verschillende bomen (1 voor elk boek)
-    addTextElement("titletext", "authortext", "Author: " + FOTR.author);                    // elk boek heeft zelf een lineare boom die steeds van 1 node vertakt naar 1 andere node
+    ////////////////////////////////////////////////////////////////////////
+    addTextElement("title", "titletext", "Name: " + FOTR.name);
+    addTextElement("titletext", "authortext", "Author: " + FOTR.author);
     addTextElement("authortext", "genretext", "Genre: " + FOTR.genre);
     addTextElement("genretext", "publishertext", "Publisher: " + FOTR.publisher);
     addTextElement("publishertext", "pagestext", "Number of pages: " + FOTR.pages);
     addTextElement("pagestext", "ISBNtext", "ISBN: " + FOTR.ISBN);
     addTextElement("ISBNtext", "ratingtext", "Average amazon rating: " + FOTR.rating);
     addTextElement("ratingtext", "serietext", "Book series: " + FOTR.series);
-    addIMGElement("serietext", "img1", "../../img/lotr1.jpg", "Cover of the first book of the series: the Fellowship of Ring"); //probeer er een plaatje in te krijgen
-    ////////////////////////////////////////////////////////////////////////////////////////
+    addIMGElement("serietext", "img1", "../../img/lotr1.jpg", "Cover of the first book of the series: the Fellowship of Ring");
+    /////////////////////////////////////////////////////////////////////////
     addTextElement("serietext", "astart", "Author:");
     addTextElement("astart", "a0", "");
     addLinkElement("a0", "a01", Tolkien.name,"https://en.wikipedia.org/wiki/J._R._R._Tolkien");
@@ -44,7 +51,7 @@ function insertAllContent() {
     addTextElement("a1","a2", "Lived in " + Tolkien.truenationality);
     addTextElement("a2", "a3", Tolkien.age);
     addTextElement("a3", "a4", "Most important work: " + Tolkien.mostimportantwork);
-    ///////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////
     addTextElement("title2", "title2text", "Name: " + TTT.name);
     addTextElement("title2text", "author2text", "Author: " + TTT.author);
     addTextElement("author2text", "genre2text", "Genre: " + TTT.genre);
@@ -54,7 +61,7 @@ function insertAllContent() {
     addTextElement("ISBN2text", "rating2text", "Average amazon rating: " + TTT.rating);
     addTextElement("rating2text", "serie2text", "Book series: " + TTT.series);
     addIMGElement("rating2text", "img2", "../../img/lotr2.jpg","Cover of the second book of the series: The Two Towers");
-    ///////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////
     addTextElement("img2", "pstart", "Publisher:");
     addTextElement("pstart", "p0", "");
     addLinkElement("p0", "p01", Publish.name,"https://en.wikipedia.org/wiki/Allen_%26_Unwin");
@@ -64,7 +71,7 @@ function insertAllContent() {
     addTextElement("p3", "p4", "Bought up in: " + Publish.merged);
     addTextElement("p4", "p5", "New nationality: " + Publish.newnationality);
     addTextElement("p5", "p6", "Most important work: " + Publish.mostimportantwork);
-    /////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////
     addTextElement("title3", "title3text", "Name: " + ROTK.name);
     addTextElement("title3text", "author3text", "Author: " + ROTK.author);
     addTextElement("author3text", "genre3text", "Genre: " + ROTK.genre);
@@ -74,7 +81,19 @@ function insertAllContent() {
     addTextElement("ISBN3text", "rating3text", "Average amazon rating: " + ROTK.rating);
     addTextElement("rating3text", "serie3text", "Book series: " + ROTK.series);
     addIMGElement("rating3text", "img3", "../../img/lotr3.jpg", "Cover of the third and final book of the series: The Return of the King");
-    ////////////////////////////////////////////////////////////////////////////////////////////
+}
+
+//This function styles all the elements on the page
+function stylePage(){
+    styleBody(document.getElementById("body"));
+    styleNav(document.getElementById("nav1"));
+    styleStyleMenu(document.getElementById("drops"));
+    styleSection(document.getElementById("section"), "25vw", "40px");
+    styleSection(document.getElementById("section2"), "25vw", "40px");
+    styleSection(document.getElementById("section3"), "25vw", "40px");
+    styleDiv(document.getElementById("mainDiv"));
+    styleTitle(document.getElementById("pageTitle"));
+    /////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("titletext"), "gold", "0%", "70%", "200%");
     styleElement(document.getElementById("authortext"), "gold", "0%", "40px", "75%");
     /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -91,13 +110,8 @@ function insertAllContent() {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("title3text"), "gold", "0%", "70%", "200%");
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
-    /////////////////////////////////////////////////////////////////////////////////////////
-
-    document.getElementById("p01").addEventListener("click", warning);
-    document.getElementById("a01").addEventListener("click", warning);
-    document.getElementById("save").addEventListener("click", warning);
-
 }
+
 function warning() {
     window.alert("You are about to click an external link")
 }
@@ -146,6 +160,8 @@ class Publisher {
 
     }
 }
+
+//This function creates the navigation menu, in order to go to the different pages of the website
 function addNav (element) {
     var navigation = document.createElement('nav');
     navigation.id = "nav1";
@@ -200,6 +216,7 @@ function addLinkElement (id, newid, text, link) {
     document.getElementById(id).appendChild(newDiv);
 }
 
+//This adds the 2 drop down menu's and the save button in order to dynamically change the info page. It also creates all the elements needed in order to create this style menu.
 function addStyleMenu(element){
     var newFirstElement = document.createElement('div');
     newFirstElement.id = "drops";
@@ -210,8 +227,8 @@ function addStyleMenu(element){
     select2.id = "cselect";
     newFirstElement.appendChild(select1);
     newFirstElement.appendChild(select2);
-    var tekst1 = ["Select text", "Page", "Header", "Sections", "Articles", "Footer"];
-    var values1 = ["body", "nav1,tselect,cselect", "section,section2,section3", "art1", "foot"];
+    var tekst1 = ["Select text", "Page", "Header", "Title", "Sections"];
+    var values1 = ["body", "nav1,tselect,cselect", "pageTitle",  "section,section2,section3"];
     for(let i = 0; i < tekst1.length; i++){
         var option1 = document.createElement('option');
         option1.textContent = tekst1[i];
@@ -238,12 +255,14 @@ function addStyleMenu(element){
     newFirstElement.appendChild(button);
 }
 
+//This function creates an element given the to be parent element, the id of the newly created element and which type of element you want to create.
 function addElement(element, id, tagName){
     var div = document.createElement(tagName);
     div.id = id;
     element.appendChild(div);
 }
 
+//This function styles the body
 function styleBody(body){
     body.style.width = "98vw";
     body.style.height = "100vh";
@@ -254,7 +273,7 @@ function styleBody(body){
     body.style.backgroundRepeat = "no-repeat";
 }
 
-
+//This function styles the navigation menu
 function styleNav(nav){
     nav.style.width = "97.85vw";
     nav.style.height = "7.1vh";
@@ -287,6 +306,8 @@ function styleNav(nav){
         }
     }
 }
+
+//This function styles an element
 function styleElement (element, color, marginleft, margintop, fontsize, width, height) {
     element.style.color = color;
     element.style.marginLeft = marginleft;
@@ -295,6 +316,8 @@ function styleElement (element, color, marginleft, margintop, fontsize, width, h
     element.style.width = width;
     element.style.height = height;
 }
+
+//This function styles the main div of the page
 function styleDiv (element){
     element.style.position = "absolute";
     element.style.display = "flex";
@@ -302,6 +325,7 @@ function styleDiv (element){
     element.style.zIndex = "-100";
 }
 
+//This function styles the title of the page
 function styleTitle (title){
     title.style.color = "gold";
     title.style.marginLeft = "38%";
@@ -310,11 +334,13 @@ function styleTitle (title){
     title.style.textShadow = "0.016em 0 black, 0 0.016em black, -0.016em 0 black, 0 -0.016em black";
 }
 
+//This function styles a given section of the page
 function styleSection (section, width, padding) {
     section.style.width = width;
     section.style.padding = padding;
 }
 
+//This function styles the style menu
 function styleStyleMenu (element){
     element.style.marginTop = "1.85%";
     element.style.marginLeft = "5%";
@@ -329,4 +355,32 @@ function styleStyleMenu (element){
     element.lastChild.style.height = "18px";
     element.lastChild.style.border = "1px solid lightgray";
     element.lastChild.style.marginLeft = "4px";
+}
+
+//This is the same function as used in the Jsmenu.js file, in order to dynamically change the look of the page
+function colsel() {
+    var a = document.getElementById("tselect").value;
+    var appear = document.getElementById('cselect').value;
+    var numb = parseInt(appear);
+    console.log(a);
+    var list = a.split(',');
+    console.log(a);
+    for (var j = 0; j < list.length; j++) {
+
+        if (a === "body") {
+            var all = document.getElementsByTagName("*");
+        } else {
+            var all = document.getElementById(list[j]).querySelectorAll("*");
+        }
+
+        for (let i = 0; i < all.length; i++) {
+            all[i].style.color = appear;
+        }
+
+        for (let i = 0; i < all.length; i++) {
+            var stylo = window.getComputedStyle(all[i], null).getPropertyValue('font-size');
+            var currentSize = parseInt(stylo);
+            all[i].style.fontSize = (currentSize + (numb / 10)) + 'px';
+        }
+    }
 }
