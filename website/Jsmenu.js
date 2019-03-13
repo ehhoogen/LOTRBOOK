@@ -11,7 +11,7 @@ function colsel() {
     var a = document.getElementById("tselect").value;
     var appear = document.getElementById('cselect').value;
     var numb = parseInt(appear);
-    // The selected id's will be put into a list. var a is a string with id's and spaces in between them
+    // The selected id's will be put into a list. var a is a string with id's and comma's in between them
     var list = a.split(',');
     console.log(a);
     for (var j = 0; j < list.length; j++) {
