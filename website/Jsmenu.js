@@ -8,18 +8,18 @@ function colsel()
     console.log(a);
     for (var j=0;j<list.length;j++) {
 
-        if(a=="body"){
+        if(a==="body"){
             var all=document.getElementsByTagName("*");
         }
         else{
             var all = document.getElementById(list[j]).querySelectorAll("*");
         }
 
-        for (var i = 0, max = all.length; i < max; i++) {
+        for (let i = 0; i < all.length; i++) {
             all[i].style.color = appear;
         }
 
-        for (var i = 0, max = all.length; i < max; i++) {
+        for (let i = 0; i < all.length; i++) {
             stylo = window.getComputedStyle(all[i], null).getPropertyValue('font-size');
             currentSize = parseInt(stylo);
             all[i].style.fontSize = (currentSize+(numb/10)) + 'px';

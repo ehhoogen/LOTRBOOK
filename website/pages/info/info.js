@@ -1,20 +1,32 @@
 function insertAllContent() {
     styleBody(document.getElementById("body"));
-    addNav();
+    addElement(document.getElementById("body"), "header", 'header');
+    addElement(document.getElementById("header"), "container", 'div');
+    addNav(document.getElementById("container"));
     styleNav(document.getElementById("nav1"));
+    addElement(document.getElementById("body"), "pageTitle", 'div');
+    addElement(document.getElementById("body"), "mainDiv", 'div');
+    addElement(document.getElementById("mainDiv"), "section", 'section');
+    addElement(document.getElementById("mainDiv"), "section2", 'section');
+    addElement(document.getElementById("mainDiv"), "section3", 'section');
+    addElement(document.getElementById("section"), "title", 'div');
+    addElement(document.getElementById("section2"), "title2", 'div');
+    addElement(document.getElementById("section3"), "title3", 'div');
+    addStyleMenu(document.getElementById("container"));
+    styleStyleMenu(document.getElementById("drops"));
     styleSection(document.getElementById("section"), "25vw", "40px");
     styleSection(document.getElementById("section2"), "25vw", "40px");
     styleSection(document.getElementById("section3"), "25vw", "40px");
     styleDiv(document.getElementById("mainDiv"));
     addTextElement("pageTitle", "information", "Information");
     styleTitle(document.getElementById("pageTitle"));
-    let FOTR = new LordOfTheRings("The Fellowship of the Ring", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928210", "4,7/5", "Lord of the Rings");
-    let TTT = new LordOfTheRings("The Two Towers", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "352", "978-0547928203", "4,9/5", "Lord of the Rings");
-    let ROTK = new LordOfTheRings("The Return of the King", "J.R.R. Tolkien", "Literature & Fiction", "The Saul Zaentz Company", "432", "978-0547928197", "4,8/5", "Lord of the Rings");
+    /////////////////////////////////////////////////////////////////////////////////
     let Publish = new Publisher("George Allen & Unwin", "1871", "British", "George Allen & Sons", "1917", "Australian", "Lord of the Rings");
     let Tolkien = new Author("J.R.R. Tolkien", "South-Africa", "England", "Died in 1972 at the age of 81", "The Hobbit");
-///////////////////////////////////////////////////////////////////////////////////
-
+    let FOTR = new LordOfTheRings("The Fellowship of the Ring", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928210", "4,7/5", "Lord of the Rings");
+    let TTT = new LordOfTheRings("The Two Towers", Tolkien.name, "Literature & Fiction", Publish.name, "352", "978-0547928203", "4,9/5", "Lord of the Rings");
+    let ROTK = new LordOfTheRings("The Return of the King", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928197", "4,8/5", "Lord of the Rings");
+    ///////////////////////////////////////////////////////////////////////////////////
     addTextElement("title", "titletext", "Name: " + FOTR.name); //de titel node vertakt in 3 verschillende bomen (1 voor elk boek)
     addTextElement("titletext", "authortext", "Author: " + FOTR.author);                    // elk boek heeft zelf een lineare boom die steeds van 1 node vertakt naar 1 andere node
     addTextElement("authortext", "genretext", "Genre: " + FOTR.genre);
@@ -128,7 +140,9 @@ class Publisher {
 
     }
 }
-function addNav () {
+function addNav (element) {
+    var navigation = document.createElement('nav');
+    navigation.id = "nav1";
     var names = ["Home", "Info", "Summary", "Characters", "Author", "Middle-Earth"];
     var links = ["../../index.html", "#", "../../summary.html", "../../characters.html", "../../author.html", "../../map.html"];
     for(let i = names.length; i > 0; i--) {
@@ -136,8 +150,9 @@ function addNav () {
         var newLink = document.createElement("a");
         newLink.href = links[i-1];
         newLink.appendChild(newContent);
-        document.getElementById("nav1").appendChild(newLink);
+        navigation.appendChild(newLink);
     }
+    element.appendChild(navigation);
 }
 
 function addIMGElement(id, newid, source, alt) {
@@ -179,6 +194,44 @@ function addLinkElement (id, newid, text, link) {
     document.getElementById(id).appendChild(newDiv);
 }
 
+function addStyleMenu(element){
+    var newFirstElement = document.createElement('div');
+    newFirstElement.id = "drops";
+    element.insertBefore(newFirstElement, element.firstChild);
+    var select1 = document.createElement('select');
+    select1.id = "tselect";
+    var select2 = document.createElement('select');
+    select2.id = "cselect";
+    newFirstElement.appendChild(select1);
+    newFirstElement.appendChild(select2);
+    var tekst1 = ["Select text", "Page", "Header", "Sections", "Articles", "Footer"];
+    var values1 = ["body", "nav1,tselect,cselect", "section,section2,section3", "art1", "foot"];
+    for(let i = 0; i < tekst1.length; i++){
+        var option1 = document.createElement('option');
+        option1.textContent = tekst1[i];
+        if(i > 0){
+            option1.value = values1[i-1];
+        }
+        select1.appendChild(option1);
+    }
+    var tekst2 = ["Text appearence", "Text Color:Blue", "Text Color:Red", "Text Color:Purple", "Text Color:White", "Font Size -10 px", "Font Size +10 px"];
+    var values2 = ["Blue", "Red", "Purple", "White", "-10", "10"];
+    for(let i = 0; i < tekst2.length; i++){
+        var option2 = document.createElement('option');
+        option2.textContent = tekst2[i];
+        if(i > 0){
+            option2.value = values2[i-1];
+        }
+        select2.appendChild(option2);
+    }
+}
+
+function addElement(element, id, tagName){
+    var div = document.createElement(tagName);
+    div.id = id;
+    element.appendChild(div);
+}
+
 function styleBody(body){
     body.style.width = "98vw";
     body.style.height = "100vh";
@@ -195,10 +248,10 @@ function styleNav(nav){
     nav.style.height = "7.1vh";
     nav.style.backgroundColor = "rgba(160, 160, 160, 0.5)";
     nav.style.float = "left";
-    nav.style.marginTop = "-13.5%";
+    nav.style.marginTop = "-2.6%";
     nav.style.zIndex = "100";
-    for(let i = 1; i <= nav.childElementCount; i++){
-        if(i == 1){
+    for(let i = 0; i < nav.childElementCount; i++){
+        if(i === 1){
             nav.childNodes[i].style.float = "right";
             nav.childNodes[i].style.textAlign = "center";
             nav.childNodes[i].style.fontSize = "16px";
@@ -248,4 +301,17 @@ function styleTitle (title){
 function styleSection (section, width, padding) {
     section.style.width = width;
     section.style.padding = padding;
+}
+
+function styleStyleMenu (element){
+    element.style.marginTop = "1.85%";
+    element.style.marginLeft = "5%";
+    var select1 = element.firstChild;
+    var select2 = element.lastChild;
+    select1.style.color = "white";
+    select1.style.backgroundColor = "black";
+    select1.style.marginLeft = "4px";
+    select2.style.color = "white";
+    select2.style.backgroundColor = "black";
+    select2.style.marginLeft = "8px";
 }
