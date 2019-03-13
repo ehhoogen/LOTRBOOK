@@ -1,7 +1,9 @@
-var save = document.getElementById("save");
+/*var save = document.getElementById("save");
 if(save){
     save.addEventListener("click", colsel);
 }
+*/
+document.getElementById("save").addEventListener("click", colsel);
 
 function colsel()
 {
