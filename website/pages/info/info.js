@@ -12,6 +12,14 @@ function insertAllContent() {
     document.getElementById("p01").addEventListener("click", warning);
     document.getElementById("a01").addEventListener("click", warning);
     document.getElementById("save").addEventListener("click", colsel);
+    document.getElementById("p01").addEventListener("click", warning);
+    document.getElementById("p01").addEventListener("mouseover", hoverp);
+    document.getElementById("p01").addEventListener("mouseout", hoverp1);
+    document.getElementById("p01").addEventListener("click", link1);
+    document.getElementById("a01").addEventListener("click", warning);
+    document.getElementById("a01").addEventListener("click", link2);
+    document.getElementById("a01").addEventListener("mouseover", hovera);
+    document.getElementById("a01").addEventListener("mouseout", hovera1);
 }
 
 //This function creates all the elements(like <header>, <div>, etc.) needed on the info page
@@ -33,13 +41,6 @@ function addAllElements(){
 //This function adds all the text/images/links to the created elements
 function addAllTextElements(FOTR, TTT, ROTK, Tolkien, Publish) {
     addTextElement("pageTitle", "information", "Information");
-    styleTitle(document.getElementById("pageTitle"));
-    /////////////////////////////////////////////////////////////////////////////////
-   // let Publish = new Publisher("George Allen & Unwin", "1871", "British", "George Allen & Sons", "1917", "Australian", "Lord of the Rings");
-   // let Tolkien = new Author("J.R.R. Tolkien", "South-Africa", "England", "Died in 1972 at the age of 81", "The Hobbit");
-   // let FOTR = new LordOfTheRings("The Fellowship of the Ring", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928210", "4,7/5", "Lord of the Rings");
-   // let TTT = new LordOfTheRings("The Two Towers", Tolkien.name, "Literature & Fiction", Publish.name, "352", "978-0547928203", "4,9/5", "Lord of the Rings");
-   // let ROTK = new LordOfTheRings("The Return of the King", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928197", "4,8/5", "Lord of the Rings");
     ///////////////////////////////////////////////////////////////////////////////////
     addTextElement("title", "titletext", "Name: " + FOTR.name);
     addTextElement("titletext", "authortext", "Author: " + FOTR.author);
@@ -118,16 +119,6 @@ function stylePage(){
     styleElement(document.getElementById("title3text"), "gold", "0%", "70%", "200%");
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
     /////////////////////////////////////////////////////////////////////////////////////////
-
-
-    document.getElementById("p01").addEventListener("click", warning);
-    document.getElementById("p01").addEventListener("mouseover", hoverp);
-    document.getElementById("p01").addEventListener("mouseout", hoverp1);
-    document.getElementById("p01").addEventListener("click", link1);
-    document.getElementById("a01").addEventListener("click", warning);
-    document.getElementById("a01").addEventListener("click", link2);
-    document.getElementById("a01").addEventListener("mouseover", hovera);
-    document.getElementById("a01").addEventListener("mouseout", hovera1);
 }
 
 function hoverp1() {document.getElementById("p01").style.color = "gold";}
