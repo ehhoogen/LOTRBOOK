@@ -6,7 +6,7 @@
     <link rel ="stylesheet" type="text/css" href="style.css"/>
     <link rel="shortcut icon" type="image/x-icon" href="img/title_icon.jpg" />
 </head>
-<body>
+<body onload="onload()">
 <header id="head">
     <script type="text/javascript" src="Jsmenu.js"></script>
     <div class="container">
@@ -18,7 +18,7 @@
                 <option value="tit">Title</option>
                 <option value="art">Articles</option>
             </select>
-            <select id="cselect" onchange="colsel();">
+            <select id="cselect">
                 <option>Text appearance</option>
                 <option value="Blue">Text Color:Blue</option>
                 <option value="Red">Text Color:Red</option>
