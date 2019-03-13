@@ -6,11 +6,11 @@ function insertAllContent() {
     let ROTK = new LordOfTheRings("The Return of the King", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928197", "4,8/5", "Lord of the Rings");
 
     addAllElements();
-    addAllTextElements(FOTR, TTT, ROTK, Tolkien, Publish);
+    addAllTextElements();
     stylePage();
 
-    document.getElementById("p01").addEventListener("click", warning);
-    document.getElementById("a01").addEventListener("click", warning);
+
+    // event listeners taking care of the hovering and clicking of the two links in the author and publisher sections
     document.getElementById("save").addEventListener("click", colsel);
     document.getElementById("p01").addEventListener("click", warning);
     document.getElementById("p01").addEventListener("mouseover", hoverp);
@@ -39,7 +39,7 @@ function addAllElements(){
 }
 
 //This function adds all the text/images/links to the created elements
-function addAllTextElements(FOTR, TTT, ROTK, Tolkien, Publish) {
+function addAllTextElements() {
     addTextElement("pageTitle", "information", "Information");
     ///////////////////////////////////////////////////////////////////////////////////
     addTextElement("title", "titletext", "Name: " + FOTR.name);
@@ -119,6 +119,8 @@ function stylePage(){
     /////////////////////////////////////////////////////////////////////////////////////////
 }
 
+//all functions from the eventlisteners
+
 function hoverp1() {document.getElementById("p01").style.color = "gold";}
 function hoverp() {document.getElementById("p01").style.color = "white";}
 function hovera1() {document.getElementById("a01").style.color = "gold";}
@@ -126,6 +128,7 @@ function hovera() {document.getElementById("a01").style.color = "white";}
 function link1() {window.location="https://en.wikipedia.org/wiki/Allen_%26_Unwin";}
 function link2() {window.location="https://en.wikipedia.org/wiki/J._R._R._Tolkien";}
 function warning() {window.alert("You are about to click an external link meaning you will leave this site.")}
+
 
 class Book {
     constructor(name, author, genre, publisher, pages, ISBN, rating, series){
@@ -187,7 +190,7 @@ function addNav (element) {
     }
     element.appendChild(navigation);
 }
-
+//this function creates a node for the images
 function addIMGElement(id, newid, source, alt) {
     var newDiv = document.createElement("div");
     newDiv.id = newid;
@@ -201,7 +204,7 @@ function addIMGElement(id, newid, source, alt) {
     newDiv.appendChild(newContent);
     document.getElementById(id).appendChild(newDiv);
 }
-
+//this function creates a node for the textsections
 function addTextElement (id, newid, text) {
     // create a new div element
     var newDiv1 = document.createElement("p");
@@ -215,7 +218,7 @@ function addTextElement (id, newid, text) {
     document.getElementById(id).appendChild(newDiv1);
 
 }
-
+//this function creates a link node
 function addLinkElement (id, newid, text) {
     var newDiv = document.createElement('a');
     newDiv.id = newid;
