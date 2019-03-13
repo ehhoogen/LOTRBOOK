@@ -93,6 +93,9 @@ function insertAllContent() {
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
     /////////////////////////////////////////////////////////////////////////////////////////
 
+    document.getElementById("p01").addEventListener("click", alert);
+
+
 }
 
 
