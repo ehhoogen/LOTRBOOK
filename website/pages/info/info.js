@@ -106,14 +106,12 @@ function stylePage(){
     /////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("astart"), "gold", "0%", "20%", "200%");
     styleElement(document.getElementById("a0"), "gold", "0%", "0%", "50%");
-    styleElement(document.getElementById("a01"), "gold");
     ////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("title2text"), "gold", "0%", "70%", "200%");
     styleElement(document.getElementById("author2text"), "gold", "0%", "40px", "75%");
     ////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("pstart"), "gold", "0%", "14%", "200%");
     styleElement(document.getElementById("p0"), "gold", "0%", "0%", "50%");
-    styleElement(document.getElementById("p01"), "gold");
     ////////////////////////////////////////////////////////////////////////////////////////////////
     styleElement(document.getElementById("title3text"), "gold", "0%", "70%", "200%");
     styleElement(document.getElementById("author3text"), "gold", "0%", "40px", "75%");
@@ -232,6 +230,7 @@ function addLinkElement (id, newid, text) {
     newDiv.id = newid;
     newDiv.title = text;
     newDiv.style.textDecoration = "underline";
+    newDiv.style.color = "gold";
     var newContent = document.createTextNode(text);
     newDiv.appendChild(newContent);
     document.getElementById(id).appendChild(newDiv);
