@@ -1,8 +1,3 @@
-/*var save = document.getElementById("save");
-if(save){
-    save.addEventListener("click", colsel);
-}
-*/
 function onload() {
     document.getElementById("save").addEventListener("click", colsel);
 }

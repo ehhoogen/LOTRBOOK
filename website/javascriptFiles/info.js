@@ -6,7 +6,7 @@ function insertAllContent() {
     let ROTK = new LordOfTheRings("The Return of the King", Tolkien.name, "Literature & Fiction", Publish.name, "432", "978-0547928197", "4,8/5", "Lord of the Rings");
 
     addAllElements();
-    addAllTextElements();
+    addAllTextElements(FOTR, TTT, ROTK, Tolkien, Publish);
     stylePage();
 
 
@@ -39,7 +39,7 @@ function addAllElements(){
 }
 
 //This function adds all the text/images/links to the created elements
-function addAllTextElements() {
+function addAllTextElements(FOTR, TTT, ROTK, Tolkien, Publish) {
     addTextElement("pageTitle", "information", "Information");
     ///////////////////////////////////////////////////////////////////////////////////
     addTextElement("title", "titletext", "Name: " + FOTR.name);
@@ -50,7 +50,7 @@ function addAllTextElements() {
     addTextElement("pagestext", "ISBNtext", "ISBN: " + FOTR.ISBN);
     addTextElement("ISBNtext", "ratingtext", "Average amazon rating: " + FOTR.rating);
     addTextElement("ratingtext", "serietext", "Book series: " + FOTR.series);
-    addIMGElement("serietext", "img1", "../../img/lotr1.jpg", "Cover of the first book of the series: the Fellowship of Ring");
+    addIMGElement("serietext", "img1", "../img/lotr1.jpg", "Cover of the first book of the series: the Fellowship of Ring");
     /////////////////////////////////////////////////////////////////////////
     addTextElement("serietext", "astart", "Author:");
     addTextElement("astart", "a0", "");
@@ -68,7 +68,7 @@ function addAllTextElements() {
     addTextElement("pages2text", "ISBN2text", "ISBN: " + TTT.ISBN);
     addTextElement("ISBN2text", "rating2text", "Average amazon rating: " + TTT.rating);
     addTextElement("rating2text", "serie2text", "Book series: " + TTT.series);
-    addIMGElement("rating2text", "img2", "../../img/lotr2.jpg","Cover of the second book of the series: The Two Towers");
+    addIMGElement("rating2text", "img2", "../img/lotr2.jpg","Cover of the second book of the series: The Two Towers");
     /////////////////////////////////////////////////////////////////////////////////////
     addTextElement("img2", "pstart", "Publisher:");
     addTextElement("pstart", "p0", "");
@@ -88,7 +88,7 @@ function addAllTextElements() {
     addTextElement("pages3text", "ISBN3text", "ISBN: " + ROTK.ISBN);
     addTextElement("ISBN3text", "rating3text", "Average amazon rating: " + ROTK.rating);
     addTextElement("rating3text", "serie3text", "Book series: " + ROTK.series);
-    addIMGElement("rating3text", "img3", "../../img/lotr3.jpg", "Cover of the third and final book of the series: The Return of the King");
+    addIMGElement("rating3text", "img3", "../img/lotr3.jpg", "Cover of the third and final book of the series: The Return of the King");
 }
 
 //This function styles all the elements on the page
@@ -131,7 +131,7 @@ function warning() {window.alert("You are about to click an external link meanin
 
 
 class Book {
-    constructor(name, author, genre, publisher, pages, ISBN, rating, series){
+    constructor(name, author, genre, publisher, pages, ISBN, rating){
         this.name = name;
         this.author = author;
         this.genre = genre;
@@ -180,7 +180,7 @@ function addNav (element) {
     var navigation = document.createElement('nav');
     navigation.id = "nav1";
     var names = ["Home", "Info", "Summary", "Characters", "Author", "Middle-Earth"];
-    var links = ["../../index.html", "#", "../../summary.html", "../../characters.html", "../../author.html", "../../map.html"];
+    var links = ["../pages/index.html", "#", "../pages/summary.html", "../pages/characters.html", "../pages/author.html", "../pages/maps/map.html"];
     for(let i = names.length; i > 0; i--) {
         var newContent = document.createTextNode(names[i-1]);
         var newLink = document.createElement("a");
@@ -281,7 +281,7 @@ function styleBody(body){
     body.style.width = "98vw";
     body.style.height = "100vh";
     body.style.backgroundColor = "black";
-    body.style.backgroundImage = "url('../../img/background.jpg')";
+    body.style.backgroundImage = "url('../img/background.jpg')";
     body.style.backgroundPosition = "0 -70px";
     body.style.backgroundSize = "100%";
     body.style.backgroundRepeat = "no-repeat";
